@@ -1,0 +1,2815 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#999999">
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="manifest" href="manifest.manifest">
+		<title>Dòmino</title>
+		<style>
+html,body {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+.general {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+@media only screen and (min-width: 320px) {
+html,body {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 360px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+.general {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 360px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+}
+@media only screen and (min-width: 360px) {
+html,body {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 360px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+.general {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 360px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+}
+@media only screen and (min-width: 720px) {
+html,body {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 720px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+.general {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 720px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+}
+@media only screen and (min-width: 1024px) {
+html,body {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 1024px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+.general {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 1024px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+}
+@media only screen and (min-width: 1080px) {
+html,body {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 1080px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+.general {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 1080px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+}
+@media only screen and (min-width: 1280px) {
+html,body {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 1280px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+.general {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 1280px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+}
+@media only screen and (min-width: 1440px) {
+html,body {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 1440px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+.general {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 1440px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+}
+@media only screen and (min-width: 1920px) {
+html,body {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 1920px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+.general {
+  -webkit-text-size-adjust: none;
+  background-color: black;
+  color: white;
+  width: 1920px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:sticky;
+  font-weight:normal;
+  font-family: "Courier New", Courier, monospace;
+}
+}
+		</style>
+		<script>
+        /*    
+        @licstart  The following is the entire license notice for the 
+        JavaScript code in this page.
+
+        Copyright (C) 2019  Bonjour
+
+        The JavaScript code in this page is free software: you can
+        redistribute it and/or modify it under the terms of the GNU
+        General Public License (GNU GPL) as published by the Free Software
+        Foundation, either version 3 of the License, or (at your option)
+        any later version.  The code is distributed WITHOUT ANY WARRANTY;
+        without even the implied warranty of MERCHANTABILITY or FITNESS
+        FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+        As additional permission under GNU GPL version 3 section 7, you
+        may distribute non-source (e.g., minimized or compacted) forms of
+        that code without the copy of the GNU GPL normally required by
+        section 4, provided you include this license notice and a URL
+        through which recipients can access the Corresponding Source.   
+
+
+        @licend  The above is the entire license notice
+        for the JavaScript code in this page.
+        */
+        </script>
+		<script type="text/javascript">
+/* 
+   Totes les fitxes del domino 
+   [00,01,11,02,12,22,03,
+   13,23,33,04,14,24,34,
+   44,05,15,25,35,45,55,
+   06,16,26,36,46,56,66]
+*/
+var i;
+var contador;
+var fitxes_del_joc=new Array(28);
+for (i = 0; i < 28; i++) 
+	{
+	fitxes_del_joc[i]=new Array(2);
+	}
+var fitxes_del_joc=[["0","0"],["0","1"],["1","1"],["0","2"],["1","2"],["2","2"],["0","3"],["1","3"],["2","3"],["3","3"],["0","4"],["1","4"],["2","4"],["3","4"],["4","4"],["0","5"],["1","5"],["2","5"],["3","5"],["4","5"],["5","5"],["0","6"],["1","6"],["2","6"],["3","6"],["4","6"],["5","6"],["6","6"]];
+var fitxa,f_ant,num_jugador;
+var cadena_0_j0=new Array(7);
+var cadena_1_j0=new Array(7);
+var cadena_0_j1=new Array(7);
+var cadena_1_j1=new Array(7);
+var cadena_0_j2=new Array(7);
+var cadena_1_j2=new Array(7);
+var cadena_0_j3=new Array(7);
+var cadena_1_j3=new Array(7);
+var numero=new Array(28);
+var jugador_fitxes=new Array(4);
+for (i=0;i<4;i++) 
+	{
+	jugador_fitxes[i]=new Array(7);
+	}
+var ja_s_ha_repartit;
+var text_entrat;
+var text_entrat0;
+var text_entrat1;
+var missatge;
+var torn;
+var cadena_fitxes_tirades="escombraries";
+var cadena_fitxes_tirades_dreta="escombraries";
+var cadena_fitxes_tirades_esquerra="escombraries";
+var inici_jugador;
+var doblesj0=0;
+var doblesj1=0;
+var doblesj2=0;
+var doblesj3=0;
+var taula_esquerra;
+var taula_dreta;
+var ja_s_ha_tirat;
+var possibilitat_de_tirar;
+var numero_de_fitxes_ja_tirades;
+var numero_de_jugadors_que_passen_seguit;
+var s_ha_passat;
+var la_partida_s_ha_acavat;
+var num_fitxes_j0=0;
+var num_fitxes_j1=0;
+var num_fitxes_j2=0;
+var num_fitxes_j3=0;
+var seleccionat_j0=new Array(7);
+var missatge_seleccio;	
+var contador_de_fitxes=0;
+var derrera_doble=false;
+var incrementador_top=0;
+var conta_esquerra=0;
+var conta_dreta=0;
+var ja_ha_tirat=false;
+var ja_m_he_queixat=false;
+var m_he_de_queixar=false;
+function obtenir_parametres() 
+	{
+	var localitzador_uniforme=document.cookie.indexOf('?');
+	var parametres=new Array();
+	if (localitzador_uniforme!=-1) 
+		{
+		var variables_obtingudes=document.cookie.substring(localitzador_uniforme+1, document.cookie.length).split('&');
+		for (i=0; i<variables_obtingudes.length; i++) 
+			{
+			valor_obtingut=variables_obtingudes[i].split('=');
+			parametres[valor_obtingut[0]]=valor_obtingut[1];
+			}
+		}
+	return parametres;
+	}
+parametres=obtenir_parametres();
+contador=unescape(parametres["contador"]);
+ja_s_ha_repartit=unescape(parametres["ja_s_ha_repartit"]);
+missatge=unescape(parametres["missatge"]);
+cadena_fitxes_tirades=unescape(parametres["cadena_fitxes_tirades"]);
+inici_jugador=unescape(parametres["inici_jugador"]);
+torn=unescape(parametres["torn"]);
+numero_de_jugadors_que_passen_seguit=unescape(parametres["numero_de_jugadors_que_passen_seguit"]);
+la_partida_s_ha_acavat=unescape(parametres["la_partida_s_ha_acavat"]);
+s_ha_passat=unescape(parametres["s_ha_passat"]);
+text_entrat=unescape(parametres["text_entrat"]);
+text_entrat0=unescape(parametres["text_entrat0"]);
+text_entrat1=unescape(parametres["text_entrat1"]);
+ja_s_ha_tirat=unescape(parametres["ja_s_ha_tirat"]);
+ja_m_he_queixat=unescape(parametres["ja_m_he_queixat"]);
+if (text_entrat=="undefined")
+	{
+	text_entrat="";
+	}
+if (text_entrat0=="undefined")
+	{
+	text_entrat0="";
+	}
+if (text_entrat1=="undefined")
+	{
+	text_entrat1="";
+	}
+for (i=0;i<7;i++)
+	{
+	seleccionat_j0[i]=unescape(parametres["seleccionat_j0["+i+"]"]);
+	if(seleccionat_j0[i]=="undefined")
+		{
+		seleccionat_j0[i]="no_seleccionada";
+		}
+	}	
+if (numero_de_jugadors_que_passen_seguit=="undefined")
+	{
+	numero_de_jugadors_que_passen_seguit=0;
+	}
+if (contador=="undefined")
+	{
+	contador=-1;
+	}
+if (la_partida_s_ha_acavat=="undefined")
+	{
+	la_partida_s_ha_acavat=false;
+	}
+if (s_ha_passat=="undefined")
+	{
+	s_ha_passat=false;
+	}
+if (ja_s_ha_tirat=="undefined")
+	{
+	ja_s_ha_tirat=false;
+	}
+if (ja_m_he_queixat=="undefined")
+	{
+	ja_m_he_queixat=false;
+	}
+contador++;
+if (ja_s_ha_repartit!="undefined")
+	{
+	for (i=0;i<7;i++)
+		{
+		cadena_0_j0[i]=unescape(parametres["cadena_0_j0["+i+"]"]);
+		cadena_1_j0[i]=unescape(parametres["cadena_1_j0["+i+"]"]);
+		cadena_0_j1[i]=unescape(parametres["cadena_0_j1["+i+"]"]);
+		cadena_1_j1[i]=unescape(parametres["cadena_1_j1["+i+"]"]);
+		cadena_0_j2[i]=unescape(parametres["cadena_0_j2["+i+"]"]);
+		cadena_1_j2[i]=unescape(parametres["cadena_1_j2["+i+"]"]);
+		cadena_0_j3[i]=unescape(parametres["cadena_0_j3["+i+"]"]);
+		cadena_1_j3[i]=unescape(parametres["cadena_1_j3["+i+"]"]);
+		}
+	}
+function recarregar()
+	{
+document.cookie = "string_variables="+"?contador="+contador+"&ja_m_he_queixat="+ja_m_he_queixat+"&text_entrat="+text_entrat+"&text_entrat0="+text_entrat0+"&text_entrat1="+text_entrat1+"&ja_s_ha_repartit="+ja_s_ha_repartit+"&torn="+torn+"&inici_jugador="+inici_jugador+"&la_partida_s_ha_acavat="+la_partida_s_ha_acavat+"&ja_s_ha_tirat="+ja_s_ha_tirat+"&s_ha_passat="+s_ha_passat+"&missatge="+missatge+"&cadena_fitxes_tirades="+cadena_fitxes_tirades+"&seleccionat_j0[0]="+seleccionat_j0[0]+"&seleccionat_j0[1]="+seleccionat_j0[1]+"&seleccionat_j0[2]="+seleccionat_j0[2]+"&seleccionat_j0[3]="+seleccionat_j0[3]+"&seleccionat_j0[4]="+seleccionat_j0[4]+"&seleccionat_j0[5]="+seleccionat_j0[5]+"&seleccionat_j0[6]="+seleccionat_j0[6]+"&numero_de_jugadors_que_passen_seguit="+numero_de_jugadors_que_passen_seguit+"&cadena_0_j0[0]="+cadena_0_j0[0]+"&cadena_0_j0[1]="+cadena_0_j0[1]+"&cadena_0_j0[2]="+cadena_0_j0[2]+"&cadena_0_j0[3]="+cadena_0_j0[3]+"&cadena_0_j0[4]="+cadena_0_j0[4]+"&cadena_0_j0[5]="+cadena_0_j0[5]+"&cadena_0_j0[6]="+cadena_0_j0[6]+"&cadena_0_j1[0]="+cadena_0_j1[0]+"&cadena_0_j1[1]="+cadena_0_j1[1]+"&cadena_0_j1[2]="+cadena_0_j1[2]+"&cadena_0_j1[3]="+cadena_0_j1[3]+"&cadena_0_j1[4]="+cadena_0_j1[4]+"&cadena_0_j1[5]="+cadena_0_j1[5]+"&cadena_0_j1[6]="+cadena_0_j1[6]+"&cadena_0_j2[0]="+cadena_0_j2[0]+"&cadena_0_j2[1]="+cadena_0_j2[1]+"&cadena_0_j2[2]="+cadena_0_j2[2]+"&cadena_0_j2[3]="+cadena_0_j2[3]+"&cadena_0_j2[4]="+cadena_0_j2[4]+"&cadena_0_j2[5]="+cadena_0_j2[5]+"&cadena_0_j2[6]="+cadena_0_j2[6]+"&cadena_0_j3[0]="+cadena_0_j3[0]+"&cadena_0_j3[1]="+cadena_0_j3[1]+"&cadena_0_j3[2]="+cadena_0_j3[2]+"&cadena_0_j3[3]="+cadena_0_j3[3]+"&cadena_0_j3[4]="+cadena_0_j3[4]+"&cadena_0_j3[5]="+cadena_0_j3[5]+"&cadena_0_j3[6]="+cadena_0_j3[6]+"&cadena_1_j0[0]="+cadena_1_j0[0]+"&cadena_1_j0[1]="+cadena_1_j0[1]+"&cadena_1_j0[2]="+cadena_1_j0[2]+"&cadena_1_j0[3]="+cadena_1_j0[3]+"&cadena_1_j0[4]="+cadena_1_j0[4]+"&cadena_1_j0[5]="+cadena_1_j0[5]+"&cadena_1_j0[6]="+cadena_1_j0[6]+"&cadena_1_j1[0]="+cadena_1_j1[0]+"&cadena_1_j1[1]="+cadena_1_j1[1]+"&cadena_1_j1[2]="+cadena_1_j1[2]+"&cadena_1_j1[3]="+cadena_1_j1[3]+"&cadena_1_j1[4]="+cadena_1_j1[4]+"&cadena_1_j1[5]="+cadena_1_j1[5]+"&cadena_1_j1[6]="+cadena_1_j1[6]+"&cadena_1_j2[0]="+cadena_1_j2[0]+"&cadena_1_j2[1]="+cadena_1_j2[1]+"&cadena_1_j2[2]="+cadena_1_j2[2]+"&cadena_1_j2[3]="+cadena_1_j2[3]+"&cadena_1_j2[4]="+cadena_1_j2[4]+"&cadena_1_j2[5]="+cadena_1_j2[5]+"&cadena_1_j2[6]="+cadena_1_j2[6]+"&cadena_1_j3[0]="+cadena_1_j3[0]+"&cadena_1_j3[1]="+cadena_1_j3[1]+"&cadena_1_j3[2]="+cadena_1_j3[2]+"&cadena_1_j3[3]="+cadena_1_j3[3]+"&cadena_1_j3[4]="+cadena_1_j3[4]+"&cadena_1_j3[5]="+cadena_1_j3[5]+"&cadena_1_j3[6]="+cadena_1_j3[6];
+
+	document.location.href = document.location.pathname;
+	/*document.location.href = document.location.pathname+"?contador="+contador+"&ja_m_he_queixat="+ja_m_he_queixat+"&text_entrat="+text_entrat+"&text_entrat0="+text_entrat0+"&text_entrat1="+text_entrat1+"&ja_s_ha_repartit="+ja_s_ha_repartit+"&torn="+torn+"&inici_jugador="+inici_jugador+"&la_partida_s_ha_acavat="+la_partida_s_ha_acavat+"&ja_s_ha_tirat="+ja_s_ha_tirat+"&s_ha_passat="+s_ha_passat+"&missatge="+missatge+"&cadena_fitxes_tirades="+cadena_fitxes_tirades+"&seleccionat_j0[0]="+seleccionat_j0[0]+"&seleccionat_j0[1]="+seleccionat_j0[1]+"&seleccionat_j0[2]="+seleccionat_j0[2]+"&seleccionat_j0[3]="+seleccionat_j0[3]+"&seleccionat_j0[4]="+seleccionat_j0[4]+"&seleccionat_j0[5]="+seleccionat_j0[5]+"&seleccionat_j0[6]="+seleccionat_j0[6]+"&numero_de_jugadors_que_passen_seguit="+numero_de_jugadors_que_passen_seguit+"&cadena_0_j0[0]="+cadena_0_j0[0]+"&cadena_0_j0[1]="+cadena_0_j0[1]+"&cadena_0_j0[2]="+cadena_0_j0[2]+"&cadena_0_j0[3]="+cadena_0_j0[3]+"&cadena_0_j0[4]="+cadena_0_j0[4]+"&cadena_0_j0[5]="+cadena_0_j0[5]+"&cadena_0_j0[6]="+cadena_0_j0[6]+"&cadena_0_j1[0]="+cadena_0_j1[0]+"&cadena_0_j1[1]="+cadena_0_j1[1]+"&cadena_0_j1[2]="+cadena_0_j1[2]+"&cadena_0_j1[3]="+cadena_0_j1[3]+"&cadena_0_j1[4]="+cadena_0_j1[4]+"&cadena_0_j1[5]="+cadena_0_j1[5]+"&cadena_0_j1[6]="+cadena_0_j1[6]+"&cadena_0_j2[0]="+cadena_0_j2[0]+"&cadena_0_j2[1]="+cadena_0_j2[1]+"&cadena_0_j2[2]="+cadena_0_j2[2]+"&cadena_0_j2[3]="+cadena_0_j2[3]+"&cadena_0_j2[4]="+cadena_0_j2[4]+"&cadena_0_j2[5]="+cadena_0_j2[5]+"&cadena_0_j2[6]="+cadena_0_j2[6]+"&cadena_0_j3[0]="+cadena_0_j3[0]+"&cadena_0_j3[1]="+cadena_0_j3[1]+"&cadena_0_j3[2]="+cadena_0_j3[2]+"&cadena_0_j3[3]="+cadena_0_j3[3]+"&cadena_0_j3[4]="+cadena_0_j3[4]+"&cadena_0_j3[5]="+cadena_0_j3[5]+"&cadena_0_j3[6]="+cadena_0_j3[6]+"&cadena_1_j0[0]="+cadena_1_j0[0]+"&cadena_1_j0[1]="+cadena_1_j0[1]+"&cadena_1_j0[2]="+cadena_1_j0[2]+"&cadena_1_j0[3]="+cadena_1_j0[3]+"&cadena_1_j0[4]="+cadena_1_j0[4]+"&cadena_1_j0[5]="+cadena_1_j0[5]+"&cadena_1_j0[6]="+cadena_1_j0[6]+"&cadena_1_j1[0]="+cadena_1_j1[0]+"&cadena_1_j1[1]="+cadena_1_j1[1]+"&cadena_1_j1[2]="+cadena_1_j1[2]+"&cadena_1_j1[3]="+cadena_1_j1[3]+"&cadena_1_j1[4]="+cadena_1_j1[4]+"&cadena_1_j1[5]="+cadena_1_j1[5]+"&cadena_1_j1[6]="+cadena_1_j1[6]+"&cadena_1_j2[0]="+cadena_1_j2[0]+"&cadena_1_j2[1]="+cadena_1_j2[1]+"&cadena_1_j2[2]="+cadena_1_j2[2]+"&cadena_1_j2[3]="+cadena_1_j2[3]+"&cadena_1_j2[4]="+cadena_1_j2[4]+"&cadena_1_j2[5]="+cadena_1_j2[5]+"&cadena_1_j2[6]="+cadena_1_j2[6]+"&cadena_1_j3[0]="+cadena_1_j3[0]+"&cadena_1_j3[1]="+cadena_1_j3[1]+"&cadena_1_j3[2]="+cadena_1_j3[2]+"&cadena_1_j3[3]="+cadena_1_j3[3]+"&cadena_1_j3[4]="+cadena_1_j3[4]+"&cadena_1_j3[5]="+cadena_1_j3[5]+"&cadena_1_j3[6]="+cadena_1_j3[6];*/
+	}
+function repartir()
+	{
+	for(fitxa=0;fitxa<28;fitxa++)
+		{
+		numero[fitxa]=parseInt(Math.random()*28);
+		if (fitxa>0)
+			{
+			for (f_ant=fitxa-1;f_ant>-1;f_ant--)
+				{
+				if (numero[fitxa]==numero[f_ant])
+					{
+					numero[fitxa]=parseInt(Math.random()*28);
+					f_ant=fitxa;	
+					}
+				}				
+			}
+ 		}
+	num_jugador=0;
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		jugador_fitxes[0][fitxa]=numero[fitxa];
+		cadena_0_j0[fitxa]=fitxes_del_joc[jugador_fitxes[num_jugador][fitxa]][0];
+		cadena_1_j0[fitxa]=fitxes_del_joc[jugador_fitxes[num_jugador][fitxa]][1];
+		}
+	num_jugador=1;
+	for (fitxa=7;fitxa<14;fitxa++)
+		{
+		jugador_fitxes[1][fitxa]=numero[fitxa];
+		cadena_0_j1[fitxa-7]=fitxes_del_joc[jugador_fitxes[num_jugador][fitxa]][0];
+		cadena_1_j1[fitxa-7]=fitxes_del_joc[jugador_fitxes[num_jugador][fitxa]][1];
+		}
+	num_jugador=2;
+	for (fitxa=14;fitxa<21;fitxa++)
+		{
+		jugador_fitxes[2][fitxa]=numero[fitxa];	
+		cadena_0_j2[fitxa-14]=fitxes_del_joc[jugador_fitxes[num_jugador][fitxa]][0];
+		cadena_1_j2[fitxa-14]=fitxes_del_joc[jugador_fitxes[num_jugador][fitxa]][1];
+		}
+	num_jugador=3;
+	for (fitxa=21;fitxa<28;fitxa++)
+		{
+		jugador_fitxes[3][fitxa]=numero[fitxa];
+		cadena_0_j3[fitxa-21]=fitxes_del_joc[jugador_fitxes[num_jugador][fitxa]][0];
+		cadena_1_j3[fitxa-21]=fitxes_del_joc[jugador_fitxes[num_jugador][fitxa]][1];
+		}
+	}
+function cinc_dobles()
+	{
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		//j0
+		if (cadena_0_j0[fitxa]==6 && cadena_1_j0[fitxa]==6)
+			{
+			doblesj0++;
+			}
+		if (cadena_0_j0[fitxa]==5 && cadena_1_j0[fitxa]==5)
+			{
+			doblesj0++;
+			}
+		if (cadena_0_j0[fitxa]==4 && cadena_1_j0[fitxa]==4)
+			{
+			doblesj0++;
+			}
+		if (cadena_0_j0[fitxa]==3 && cadena_1_j0[fitxa]==3)
+			{
+			doblesj0++;
+			}
+		if (cadena_0_j0[fitxa]==2 && cadena_1_j0[fitxa]==2)
+			{
+			doblesj0++;
+			}
+		if (cadena_0_j0[fitxa]==1 && cadena_1_j0[fitxa]==1)
+			{
+			doblesj0++;
+			}
+		if (cadena_0_j0[fitxa]==0 && cadena_1_j0[fitxa]==0)
+			{
+			doblesj0++;
+			}
+		//j1
+		if (cadena_0_j1[fitxa]==6 && cadena_1_j1[fitxa]==6)
+			{
+			doblesj1++;
+			}
+		if (cadena_0_j1[fitxa]==5 && cadena_1_j1[fitxa]==5)
+			{
+			doblesj1++;
+			}
+		if (cadena_0_j1[fitxa]==4 && cadena_1_j1[fitxa]==4)
+			{
+			doblesj1++;
+			}
+		if (cadena_0_j1[fitxa]==3 && cadena_1_j1[fitxa]==3)
+			{
+			doblesj1++;
+			}
+		if (cadena_0_j1[fitxa]==2 && cadena_1_j1[fitxa]==2)
+			{
+			doblesj1++;
+			}
+		if (cadena_0_j1[fitxa]==1 && cadena_1_j1[fitxa]==1)
+			{
+			doblesj1++;
+			}
+		if (cadena_0_j1[fitxa]==0 && cadena_1_j1[fitxa]==0)
+			{
+			doblesj1++;
+			}
+		//j2
+		if (cadena_0_j2[fitxa]==6 && cadena_1_j2[fitxa]==6)
+			{
+			doblesj2++;
+			}
+		if (cadena_0_j2[fitxa]==5 && cadena_1_j2[fitxa]==5)
+			{
+			doblesj2++;
+			}
+		if (cadena_0_j2[fitxa]==4 && cadena_1_j2[fitxa]==4)
+			{
+			doblesj2++;
+			}
+		if (cadena_0_j2[fitxa]==3 && cadena_1_j2[fitxa]==3)
+			{
+			doblesj2++;
+			}
+		if (cadena_0_j2[fitxa]==2 && cadena_1_j2[fitxa]==2)
+			{
+			doblesj2++;
+			}
+		if (cadena_0_j2[fitxa]==1 && cadena_1_j2[fitxa]==1)
+			{
+			doblesj2++;
+			}
+		if (cadena_0_j2[fitxa]==0 && cadena_1_j2[fitxa]==0)
+			{
+			doblesj2++;
+			}
+		//j3
+		if (cadena_0_j3[fitxa]==6 && cadena_1_j3[fitxa]==6)
+			{
+			doblesj3++;
+			}
+		if (cadena_0_j3[fitxa]==5 && cadena_1_j3[fitxa]==5)
+			{
+			doblesj3++;
+			}
+		if (cadena_0_j3[fitxa]==4 && cadena_1_j3[fitxa]==4)
+			{
+			doblesj3++;
+			}
+		if (cadena_0_j3[fitxa]==3 && cadena_1_j3[fitxa]==3)
+			{
+			doblesj3++;
+			}
+		if (cadena_0_j3[fitxa]==2 && cadena_1_j3[fitxa]==2)
+			{
+			doblesj3++;
+			}
+		if (cadena_0_j3[fitxa]==1 && cadena_1_j3[fitxa]==1)
+			{
+			doblesj3++;
+			}
+		if (cadena_0_j3[fitxa]==0 && cadena_1_j3[fitxa]==0)
+			{
+			doblesj3++;
+			}
+		}
+	if (doblesj0>4)
+		{
+		missatge="<br>Tu tens 5 o mes dobles.<br>Has guanyat!!!! ";	
+		la_partida_s_ha_acavat=true;
+		torn=1000;
+		recarregar();
+		}
+	if (doblesj1>4)
+		{
+		missatge="<br>L'Antonio te 5 o mes dobles.<br>L'Antonio ha guanyat!!!! ";
+		la_partida_s_ha_acavat=true;
+		torn=1000;
+		recarregar();
+		}
+	if (doblesj2>4)
+		{
+		missatge="<br>En Ramone te 5 o mes dobles.<br>En Ramone ha guanyat!!!! ";
+		la_partida_s_ha_acavat=true;
+		torn=1000;
+		recarregar();
+		}
+	if (doblesj3>4)
+		{
+		missatge="<br>En Bonjour te 5 o mes dobles.<br>En Bonjour ha guanyat!!!! ";
+		la_partida_s_ha_acavat=true;
+		torn=1000;
+		recarregar();
+		}
+	}
+function sis_doble()
+	{
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (cadena_0_j0[fitxa]==6 && cadena_1_j0[fitxa]==6){torn=0;inici_jugador=0;}
+		if (cadena_0_j1[fitxa]==6 && cadena_1_j1[fitxa]==6){torn=1;inici_jugador=1;}
+		if (cadena_0_j2[fitxa]==6 && cadena_1_j2[fitxa]==6){torn=2;inici_jugador=2;}
+		if (cadena_0_j3[fitxa]==6 && cadena_1_j3[fitxa]==6){torn=3;inici_jugador=3;}
+		}
+	}
+function passar_un_torn()
+	{
+	var el_torn_ja_s_ha_passat=false;
+	if (torn==0 && el_torn_ja_s_ha_passat==false){torn=1;el_torn_ja_s_ha_passat=true;}
+	if (torn==1 && el_torn_ja_s_ha_passat==false){torn=2;el_torn_ja_s_ha_passat=true;}
+	if (torn==2 && el_torn_ja_s_ha_passat==false){torn=3;el_torn_ja_s_ha_passat=true;}
+	if (torn==3 && el_torn_ja_s_ha_passat==false){torn=0;el_torn_ja_s_ha_passat=true;}
+	}	
+function tirar_huma()
+	{
+	//text_entrat=document.getElementById('text_entrat').value;
+	taula_esquerra=cadena_fitxes_tirades[1];
+	taula_dreta=cadena_fitxes_tirades[cadena_fitxes_tirades.length-2];	
+	ja_s_ha_tirat=false;	
+	if (inici_jugador==0 && text_entrat[0]!="6"  && text_entrat[2]!="6" && cadena_fitxes_tirades=="|")
+		{
+		tirar_huma();
+		}
+	// huma surt amb el sis doble
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (inici_jugador==0 && torn==0 && text_entrat=="6:6" && cadena_0_j0[fitxa]=="6" && cadena_1_j0[fitxa]=="6" && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|6:6|";
+			missatge=missatge+"<br>Tu has tirat el 6:6!";
+			cadena_0_j0[fitxa]="";
+			cadena_1_j0[fitxa]="";
+			text_entrat="";
+			ja_s_ha_tirat=true;
+			}
+		}
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		// huma tira per l'esquerra
+		//encaixa la primera cadena
+		if (text_entrat.length==4 && torn==0 && cadena_0_j0[fitxa]==text_entrat[0] && cadena_1_j0[fitxa]==text_entrat[2] && taula_esquerra==cadena_0_j0[fitxa] && ja_s_ha_tirat!=true && text_entrat[3]=="e" && text_entrat[0]==taula_esquerra)
+			{
+			cadena_fitxes_tirades="|"+text_entrat[2]+":"+text_entrat[0]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>Tu has tirat el "+text_entrat[0]+":"+text_entrat[2]+"!";
+			cadena_0_j0[fitxa]="";
+			cadena_1_j0[fitxa]="";
+			text_entrat="";
+			ja_s_ha_tirat=true;
+			}
+		//encaixa la segona cadena
+		if (text_entrat.length==4 && torn==0 && cadena_1_j0[fitxa]==text_entrat[2] && cadena_0_j0[fitxa]==text_entrat[0] && taula_esquerra==cadena_1_j0[fitxa] && ja_s_ha_tirat!=true && text_entrat[3]=="e" && text_entrat[2]==taula_esquerra)
+			{
+			cadena_fitxes_tirades="|"+text_entrat[0]+":"+text_entrat[2]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>Tu has tirat el "+text_entrat[0]+":"+text_entrat[2]+"!";
+			cadena_0_j0[fitxa]="";
+			cadena_1_j0[fitxa]="";
+			text_entrat="";
+			ja_s_ha_tirat=true;
+			}
+		//huma tira per la dreta
+		//encaixa primera cadena
+		if (text_entrat.length==4 && torn==0 && cadena_0_j0[fitxa]==text_entrat[0] && cadena_1_j0[fitxa]==text_entrat[2] && taula_dreta==cadena_0_j0[fitxa] && ja_s_ha_tirat!=true && text_entrat[3]=="d" && text_entrat[0]==taula_dreta)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+text_entrat[0]+":"+text_entrat[2]+"|";
+			missatge=missatge+"<br>Tu has tirat el "+text_entrat[0]+":"+text_entrat[2]+"!";
+			cadena_0_j0[fitxa]="";
+			cadena_1_j0[fitxa]="";
+			text_entrat="";
+			ja_s_ha_tirat=true;
+			}
+		//encaixa segona cadena
+		if (text_entrat.length==4 && torn==0 && cadena_1_j0[fitxa]==text_entrat[2] && cadena_0_j0[fitxa]==text_entrat[0] && taula_dreta==cadena_1_j0[fitxa] && ja_s_ha_tirat!=true && text_entrat[3]=="d" && text_entrat[2]==taula_dreta)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+text_entrat[2]+":"+text_entrat[0]+"|";
+			missatge=missatge+"<br>Tu has tirat el "+text_entrat[0]+":"+text_entrat[2]+"!";
+			cadena_0_j0[fitxa]="";
+			cadena_1_j0[fitxa]="";
+			text_entrat="";
+			ja_s_ha_tirat=true;
+			}
+		}
+	//tira d'un sol cop dos dobles
+	if (text_entrat.length==8 && torn==0 && ja_s_ha_tirat!=true && text_entrat[0]==text_entrat[2] && text_entrat[4]==text_entrat[6] && text_entrat[0]==taula_esquerra && text_entrat[4]==taula_dreta && ((cadena_0_j0[0]==cadena_1_j0[0] && cadena_0_j0[0]==text_entrat[0] && cadena_1_j0[0]==text_entrat[0] && cadena_0_j0[0]==taula_esquerra) || (cadena_0_j0[1]==cadena_1_j0[1] && cadena_0_j0[1]==text_entrat[0] && cadena_1_j0[1]==text_entrat[0] && cadena_0_j0[1]==taula_esquerra) || (cadena_0_j0[2]==cadena_1_j0[2] && cadena_0_j0[2]==text_entrat[0] && cadena_1_j0[2]==text_entrat[0] && cadena_0_j0[2]==taula_esquerra) || (cadena_0_j0[3]==cadena_1_j0[3] && cadena_0_j0[3]==text_entrat[0] && cadena_1_j0[3]==text_entrat[0] && cadena_0_j0[3]==taula_esquerra) || (cadena_0_j0[4]==cadena_1_j0[4] && cadena_0_j0[4]==text_entrat[0] && cadena_1_j0[4]==text_entrat[0] && cadena_0_j0[4]==taula_esquerra) || (cadena_0_j0[5]==cadena_1_j0[5] && cadena_0_j0[5]==text_entrat[0] && cadena_1_j0[5]==text_entrat[0] && cadena_0_j0[5]==taula_esquerra) || (cadena_0_j0[6]==cadena_1_j0[6] && cadena_0_j0[6]==text_entrat[0] && cadena_1_j0[6]==text_entrat[0] && cadena_0_j0[6]==taula_esquerra)) && ((cadena_0_j0[0]==cadena_1_j0[0] && cadena_0_j0[0]==text_entrat[4] && cadena_1_j0[0]==text_entrat[6] && cadena_0_j0[0]==taula_dreta) || (cadena_0_j0[1]==cadena_1_j0[1] && cadena_0_j0[1]==text_entrat[4] && cadena_1_j0[1]==text_entrat[6] && cadena_0_j0[1]==taula_dreta) || (cadena_0_j0[2]==cadena_1_j0[2] && cadena_0_j0[2]==text_entrat[4] && cadena_1_j0[2]==text_entrat[6] && cadena_0_j0[2]==taula_dreta) || (cadena_0_j0[3]==cadena_1_j0[3] && cadena_0_j0[3]==text_entrat[4] && cadena_1_j0[3]==text_entrat[6] && cadena_0_j0[3]==taula_dreta) || (cadena_0_j0[4]==cadena_1_j0[4] && cadena_0_j0[4]==text_entrat[4] && cadena_1_j0[4]==text_entrat[6] && cadena_0_j0[4]==taula_dreta) || (cadena_0_j0[5]==cadena_1_j0[5] && cadena_0_j0[5]==text_entrat[4] && cadena_1_j0[5]==text_entrat[6] && cadena_0_j0[5]==taula_dreta) || (cadena_0_j0[6]==cadena_1_j0[6] && cadena_0_j0[6]==text_entrat[4] && cadena_1_j0[6]==text_entrat[6] && cadena_0_j0[6]==taula_dreta)) && text_entrat[3]=="e" && text_entrat[7]=="d" && text_entrat[0]!=text_entrat[4] && text_entrat[2]!=text_entrat[6])
+		{
+		cadena_fitxes_tirades="|"+text_entrat[0]+":"+text_entrat[2]+cadena_fitxes_tirades+text_entrat[4]+":"+text_entrat[6]+"|";
+		missatge=missatge+"<br>Tu has tirat el "+text_entrat[0]+":"+text_entrat[2]+" i el "+text_entrat[4]+":"+text_entrat[6]+"!!!!";
+		for (fitxes=0;fitxes<7;fitxes++)
+			{
+			if (text_entrat[0]==cadena_0_j0[fitxes] && text_entrat[2]==cadena_1_j0[fitxes] && text_entrat[0]==text_entrat[2])
+				{
+				cadena_0_j0[fitxes]="";
+				cadena_1_j0[fitxes]="";
+				}
+			}
+		for (fitxes=0;fitxes<7;fitxes++)
+			{
+			if (text_entrat[4]==cadena_0_j0[fitxes] && text_entrat[6]==cadena_1_j0[fitxes] && text_entrat[4]==text_entrat[6])
+				{
+				cadena_0_j0[fitxes]="";
+				cadena_1_j0[fitxes]="";
+				}
+			}
+		text_entrat="";
+		ja_s_ha_tirat=true;
+		}	
+	//huma passa
+	possibilitat_de_tirar=0;
+	if(torn==0 && (text_entrat=="passo" || text_entrat=="Passo" || text_entrat=="PASSO") && ja_s_ha_tirat!=true)
+		{
+		for (fitxa=0;fitxa<7;fitxa++)
+			{
+			if (cadena_0_j0[fitxa]==taula_esquerra || cadena_0_j0[fitxa]==taula_dreta || cadena_1_j0[fitxa]==taula_esquerra || cadena_1_j0[fitxa]==taula_dreta)
+				{
+				possibilitat_de_tirar++;				
+				}
+			}
+		if (possibilitat_de_tirar==0)
+			{
+			missatge=missatge+"<br>Has passat!";
+			s_ha_passat=true;
+			ja_s_ha_tirat=true;
+			}
+		}
+	if(torn==0 && ja_s_ha_tirat==true)
+		{
+		ja_m_he_queixat=false;
+		passar_un_torn();
+		}
+	}
+function tirar_antonio()
+	{
+	taula_esquerra=cadena_fitxes_tirades[1];
+	taula_dreta=cadena_fitxes_tirades[cadena_fitxes_tirades.length-2];
+	ja_s_ha_tirat=false;
+	//Antonio surt sis doble
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (inici_jugador==1 && torn==1 && cadena_0_j1[fitxa]=="6" && cadena_1_j1[fitxa]=="6" && ja_s_ha_tirat!=true)
+			{
+			cadena_0_j1[fitxa]="";
+			cadena_1_j1[fitxa]="";
+			cadena_fitxes_tirades="|6:6|";
+			missatge=missatge+"<br>L'Antonio ha tirat el 6:6!";
+			ja_s_ha_tirat=true;
+			}
+		}
+	//Antonio
+	//doblar-se a ambdos cantons d'un sol cop
+	//esquerra
+	var doble_esquerra=1000;
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (cadena_0_j1[fitxa]==cadena_1_j1[fitxa] && cadena_0_j1[fitxa]==taula_esquerra)
+			{
+			doble_esquerra=fitxa;
+			}
+		}
+	//dreta
+	var doble_dreta=1000;
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (cadena_0_j1[fitxa]==cadena_1_j1[fitxa] && cadena_0_j1[fitxa]==taula_dreta)
+			{
+			doble_dreta=fitxa;
+			}
+		}
+	//tirar els dos dobles
+	if (doble_esquerra!=1000 && doble_dreta!=1000 && taula_esquerra!=taula_dreta)
+		{
+		cadena_fitxes_tirades="|"+cadena_0_j1[doble_esquerra]+":"+cadena_1_j1[doble_esquerra]+cadena_fitxes_tirades+cadena_0_j1[doble_dreta]+":"+cadena_1_j1[doble_dreta]+"|";
+		missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[doble_esquerra]+":"+cadena_1_j1[doble_esquerra]+" i el "+cadena_0_j1[doble_dreta]+":"+cadena_1_j1[doble_dreta]+"!!!!";
+		cadena_0_j1[doble_esquerra]="";
+		cadena_1_j1[doble_esquerra]="";
+		cadena_0_j1[doble_dreta]="";
+		cadena_1_j1[doble_dreta]="";
+		text_entrat="";
+		ja_s_ha_tirat=true;
+		}
+	//Antonio
+	//identificar fitxes que es poden tirar marcant de guais el jugador (trampes de maquina)
+	var marcant_jugador_fitxes_tirables=new Array(7);
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (cadena_0_j1[fitxa]==taula_esquerra)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_1_j1[fitxa]==cadena_0_j2[i] || cadena_1_j1[fitxa]==cadena_1_j2[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		if (cadena_0_j1[fitxa]==taula_dreta)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_1_j1[fitxa]==cadena_0_j2[i] || cadena_1_j1[fitxa]==cadena_1_j2[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;					
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		if (cadena_1_j1[fitxa]==taula_esquerra)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_0_j1[fitxa]==cadena_0_j2[i] || cadena_0_j1[fitxa]==cadena_1_j2[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		if (cadena_1_j1[fitxa]==taula_dreta)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_0_j1[fitxa]==cadena_0_j2[i] || cadena_0_j1[fitxa]==cadena_1_j2[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;					
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		}
+	//Antonio
+	//intententar tirar amb mala llet (trampes maquina)
+	for (i=0;i<7;i++)
+		{
+		//esquerra
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_0_j1[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_1_j1[i]+":"+cadena_0_j1[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+			cadena_0_j1[i]="";
+			cadena_1_j1[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_1_j1[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_0_j1[i]+":"+cadena_1_j1[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+			cadena_0_j1[i]="";
+			cadena_1_j1[i]="";
+			ja_s_ha_tirat=true;
+			}
+		//dreta
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_0_j1[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_0_j1[i]+":"+cadena_1_j1[i]+"|";
+			missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+			cadena_0_j1[i]="";
+			cadena_1_j1[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_1_j1[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_1_j1[i]+":"+cadena_0_j1[i]+"|";
+			missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+			cadena_0_j1[i]="";
+			cadena_1_j1[i]="";
+			ja_s_ha_tirat=true;
+			}
+		}
+	//Antonio
+	//intentar tirar pel canto mes alt (si es per l'esquerra) la fitxa mes alta
+	//esquerra
+	var pal_mes_alt_que_encaixa_esquerra_0=-1;
+	var pal_mes_alt_que_encaixa_esquerra_1=-1;
+	if (taula_esquerra>taula_dreta)
+		{
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j1[i]==taula_esquerra && cadena_0_j1[i]>=pal_mes_alt_que_encaixa_esquerra_0)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j1[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j1[i];
+				}
+			if (cadena_1_j1[i]==taula_esquerra && cadena_1_j1[i]>=pal_mes_alt_que_encaixa_esquerra_1)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j1[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j1[i];
+				}
+			}
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j1[i]==taula_esquerra && pal_mes_alt_que_encaixa_esquerra_0==cadena_0_j1[i] && pal_mes_alt_que_encaixa_esquerra_1==cadena_1_j1[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades="|"+cadena_1_j1[i]+":"+cadena_0_j1[i]+cadena_fitxes_tirades;
+				missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+				cadena_0_j1[i]="";
+				cadena_1_j1[i]="";
+				ja_s_ha_tirat=true;
+				}
+			if (cadena_1_j1[i]==taula_esquerra && pal_mes_alt_que_encaixa_esquerra_0==cadena_0_j1[i] && pal_mes_alt_que_encaixa_esquerra_1==cadena_1_j1[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades="|"+cadena_0_j1[i]+":"+cadena_1_j1[i]+cadena_fitxes_tirades;
+				missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+				cadena_0_j1[i]="";
+				cadena_1_j1[i]="";
+				ja_s_ha_tirat=true;
+				}
+			}
+		}
+	//Antonio
+	//intentar tirar pel canto mes alt (si es per la dreta) la fitxa mes alta
+	//dreta
+	var pal_mes_alt_que_encaixa_dreta_0=-1;
+	var pal_mes_alt_que_encaixa_dreta_1=-1;
+	if (taula_esquerra<taula_dreta)
+		{
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j1[i]==taula_dreta && cadena_0_j1[i]>=pal_mes_alt_que_encaixa_esquerra_0)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j1[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j1[i];
+				}
+			if (cadena_1_j1[i]==taula_dreta && cadena_1_j1[i]>=pal_mes_alt_que_encaixa_esquerra_1)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j1[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j1[i];
+				}
+			}
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j1[i]==taula_dreta && pal_mes_alt_que_encaixa_dreta_0==cadena_0_j1[i] && pal_mes_alt_que_encaixa_dreta_1==cadena_1_j1[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_1_j1[i]+":"+cadena_0_j1[i]+"|";
+				missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+				cadena_0_j1[i]="";
+				cadena_1_j1[i]="";
+				ja_s_ha_tirat=true;
+				}
+			if (cadena_1_j1[i]==taula_dreta && pal_mes_alt_que_encaixa_dreta_0==cadena_0_j1[i] && pal_mes_alt_que_encaixa_dreta_1==cadena_1_j1[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades="|"+cadena_0_j1[i]+":"+cadena_1_j1[i]+cadena_fitxes_tirades;
+				missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+				cadena_0_j1[i]="";
+				cadena_1_j1[i]="";
+				ja_s_ha_tirat=true;
+				}
+			}
+		}
+	//Antonio tira el que pot
+	for (i=0;i<7;i++)
+		{
+		if (cadena_0_j1[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_0_j1[i]+":"+cadena_1_j1[i]+"|";
+			missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+			cadena_0_j1[i]="";
+			cadena_1_j1[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (cadena_1_j1[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_1_j1[i]+":"+cadena_0_j1[i]+"|";
+			missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+			cadena_0_j1[i]="";
+			cadena_1_j1[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (cadena_0_j1[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_1_j1[i]+":"+cadena_0_j1[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+			cadena_0_j1[i]="";
+			cadena_1_j1[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (cadena_1_j1[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_0_j1[i]+":"+cadena_1_j1[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>L'Antonio ha tirat el "+cadena_0_j1[i]+":"+cadena_1_j1[i]+"!";
+			cadena_0_j1[i]="";
+			cadena_1_j1[i]="";
+			ja_s_ha_tirat=true;
+			}
+		}
+	//Antonio passa
+	possibilitat_de_tirar=0;
+	if(torn==1 && ja_s_ha_tirat!=true)
+		{
+		for (fitxa=0;fitxa<7;fitxa++)
+			{
+			if (cadena_0_j1[fitxa]==taula_esquerra || cadena_0_j1[fitxa]==taula_dreta || cadena_1_j1[fitxa]==taula_esquerra || cadena_1_j1[fitxa]==taula_dreta)
+				{
+				possibilitat_de_tirar++;				
+				}
+			}
+		if (possibilitat_de_tirar==0)
+			{
+			missatge=missatge+"<br>L'Antonio ha passat!";
+			s_ha_passat=true;
+			ja_s_ha_tirat=true;
+			}
+		}
+	if (ja_s_ha_tirat==true)
+		{		
+		passar_un_torn();
+		}
+	}
+function tirar_ramone()
+	{
+	taula_esquerra=cadena_fitxes_tirades[1];
+	taula_dreta=cadena_fitxes_tirades[cadena_fitxes_tirades.length-2];
+	ja_s_ha_tirat=false;
+	//Ramone surt sis doble
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (inici_jugador==2 && torn==2 && cadena_0_j2[fitxa]=="6" && cadena_1_j2[fitxa]=="6" && ja_s_ha_tirat!=true)
+			{
+			cadena_0_j2[fitxa]="";
+			cadena_1_j2[fitxa]="";
+			cadena_fitxes_tirades="|6:6|";
+			missatge=missatge+"<br>En Ramone ha tirat el 6:6!";
+			ja_s_ha_tirat=true;
+			}
+		}
+	//Ramone
+	//doblar-se a ambdos cantons d'un sol cop
+	//esquerra
+	var doble_esquerra=1000;
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (cadena_0_j2[fitxa]==cadena_1_j2[fitxa] && cadena_0_j2[fitxa]==taula_esquerra)
+			{
+			doble_esquerra=fitxa;
+			}
+		}
+	//dreta
+	var doble_dreta=1000;
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (cadena_0_j2[fitxa]==cadena_1_j2[fitxa] && cadena_0_j2[fitxa]==taula_dreta)
+			{
+			doble_dreta=fitxa;
+			}
+		}
+	//tirar els dos dobles
+	if (doble_esquerra!=1000 && doble_dreta!=1000 && taula_esquerra!=taula_dreta)
+		{
+		cadena_fitxes_tirades="|"+cadena_0_j2[doble_esquerra]+":"+cadena_1_j2[doble_esquerra]+cadena_fitxes_tirades+cadena_0_j2[doble_dreta]+":"+cadena_1_j2[doble_dreta]+"|";
+		missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[doble_esquerra]+":"+cadena_1_j2[doble_esquerra]+" i el "+cadena_0_j2[doble_dreta]+":"+cadena_1_j2[doble_dreta]+"!!!!";
+		cadena_0_j2[doble_esquerra]="";
+		cadena_1_j2[doble_esquerra]="";
+		cadena_0_j2[doble_dreta]="";
+		cadena_1_j2[doble_dreta]="";
+		text_entrat="";
+		ja_s_ha_tirat=true;
+		}
+	//Ramone
+	//identificar fitxes que es poden tirar marcant de guais el jugador (trampes de maquina)
+	var marcant_jugador_fitxes_tirables=new Array(7);
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (cadena_0_j2[fitxa]==taula_esquerra)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_1_j2[fitxa]==cadena_0_j3[i] || cadena_1_j2[fitxa]==cadena_1_j3[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		if (cadena_0_j2[fitxa]==taula_dreta)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_1_j2[fitxa]==cadena_0_j3[i] || cadena_1_j2[fitxa]==cadena_1_j3[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;					
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		if (cadena_1_j2[fitxa]==taula_esquerra)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_0_j2[fitxa]==cadena_0_j3[i] || cadena_0_j2[fitxa]==cadena_1_j3[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		if (cadena_1_j2[fitxa]==taula_dreta)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_0_j2[fitxa]==cadena_0_j3[i] || cadena_0_j2[fitxa]==cadena_1_j3[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;					
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		}
+	//Ramone
+	//intententar tirar amb mala llet (trampes maquina)
+	for (i=0;i<7;i++)
+		{
+		//esquerra
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_0_j2[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_1_j2[i]+":"+cadena_0_j2[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+			cadena_0_j2[i]="";
+			cadena_1_j2[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_1_j2[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_0_j2[i]+":"+cadena_1_j2[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+			cadena_0_j2[i]="";
+			cadena_1_j2[i]="";
+			ja_s_ha_tirat=true;
+			}
+		//dreta
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_0_j2[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_0_j2[i]+":"+cadena_1_j2[i]+"|";
+			missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+			cadena_0_j2[i]="";
+			cadena_1_j2[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_1_j2[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_1_j2[i]+":"+cadena_0_j2[i]+"|";
+			missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+			cadena_0_j2[i]="";
+			cadena_1_j2[i]="";
+			ja_s_ha_tirat=true;
+			}
+		}
+	//Ramone
+	//intentar tirar pel canto mes alt (si es per l'esquerra) la fitxa mes alta
+	//esquerra
+	var pal_mes_alt_que_encaixa_esquerra_0=-1;
+	var pal_mes_alt_que_encaixa_esquerra_1=-1;
+	if (taula_esquerra>taula_dreta)
+		{
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j2[i]==taula_esquerra && cadena_0_j2[i]>=pal_mes_alt_que_encaixa_esquerra_0)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j2[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j2[i];
+				}
+			if (cadena_1_j2[i]==taula_esquerra && cadena_1_j2[i]>=pal_mes_alt_que_encaixa_esquerra_1)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j2[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j2[i];
+				}
+			}
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j2[i]==taula_esquerra && pal_mes_alt_que_encaixa_esquerra_0==cadena_0_j2[i] && pal_mes_alt_que_encaixa_esquerra_1==cadena_1_j2[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades="|"+cadena_1_j2[i]+":"+cadena_0_j2[i]+cadena_fitxes_tirades;
+				missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+				cadena_0_j2[i]="";
+				cadena_1_j2[i]="";
+				ja_s_ha_tirat=true;
+				}
+			if (cadena_1_j2[i]==taula_esquerra && pal_mes_alt_que_encaixa_esquerra_0==cadena_0_j2[i] && pal_mes_alt_que_encaixa_esquerra_1==cadena_1_j2[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades="|"+cadena_0_j2[i]+":"+cadena_1_j2[i]+cadena_fitxes_tirades;
+				missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+				cadena_0_j2[i]="";
+				cadena_1_j2[i]="";
+				ja_s_ha_tirat=true;
+				}
+			}
+		}
+	//Ramone
+	//intentar tirar pel canto mes alt (si es per la dreta) la fitxa mes alta
+	//dreta
+	var pal_mes_alt_que_encaixa_dreta_0=-1;
+	var pal_mes_alt_que_encaixa_dreta_1=-1;
+	if (taula_esquerra<taula_dreta)
+		{
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j2[i]==taula_dreta && cadena_0_j2[i]>=pal_mes_alt_que_encaixa_esquerra_0)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j2[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j2[i];
+				}
+			if (cadena_1_j2[i]==taula_dreta && cadena_1_j2[i]>=pal_mes_alt_que_encaixa_esquerra_1)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j2[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j2[i];
+				}
+			}
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j2[i]==taula_dreta && pal_mes_alt_que_encaixa_dreta_0==cadena_0_j2[i] && pal_mes_alt_que_encaixa_dreta_1==cadena_1_j2[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_1_j2[i]+":"+cadena_0_j2[i]+"|";
+				missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+				cadena_0_j2[i]="";
+				cadena_1_j2[i]="";
+				ja_s_ha_tirat=true;
+				}
+			if (cadena_1_j2[i]==taula_dreta && pal_mes_alt_que_encaixa_dreta_0==cadena_0_j2[i] && pal_mes_alt_que_encaixa_dreta_1==cadena_1_j2[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades="|"+cadena_0_j2[i]+":"+cadena_1_j2[i]+cadena_fitxes_tirades;
+				missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+				cadena_0_j2[i]="";
+				cadena_1_j2[i]="";
+				ja_s_ha_tirat=true;
+				}
+			}
+		}
+	//Ramone tira el que pot
+	for (i=0;i<7;i++)
+		{
+		if (cadena_0_j2[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_0_j2[i]+":"+cadena_1_j2[i]+"|";
+			missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+			cadena_0_j2[i]="";
+			cadena_1_j2[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (cadena_1_j2[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_1_j2[i]+":"+cadena_0_j2[i]+"|";
+			missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+			cadena_0_j2[i]="";
+			cadena_1_j2[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (cadena_0_j2[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_1_j2[i]+":"+cadena_0_j2[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+			cadena_0_j2[i]="";
+			cadena_1_j2[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (cadena_1_j2[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_0_j2[i]+":"+cadena_1_j2[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>En Ramone ha tirat el "+cadena_0_j2[i]+":"+cadena_1_j2[i]+"!";
+			cadena_0_j2[i]="";
+			cadena_1_j2[i]="";
+			ja_s_ha_tirat=true;
+			}
+		}
+	//Ramone passa
+	possibilitat_de_tirar=0;
+	if(torn==2 && ja_s_ha_tirat!=true)
+		{
+		for (fitxa=0;fitxa<7;fitxa++)
+			{
+			if (cadena_0_j2[fitxa]==taula_esquerra || cadena_0_j2[fitxa]==taula_dreta || cadena_1_j2[fitxa]==taula_esquerra || cadena_1_j2[fitxa]==taula_dreta)
+				{
+				possibilitat_de_tirar++;				
+				}
+			}
+		if (possibilitat_de_tirar==0)
+			{
+			missatge=missatge+"<br>En Ramone ha passat!";
+			s_ha_passat=true;
+			ja_s_ha_tirat=true;
+			}
+		}
+	if (ja_s_ha_tirat==true)
+		{
+		passar_un_torn();
+		}
+	}
+function tirar_bonjour()
+	{
+	taula_esquerra=cadena_fitxes_tirades[1];
+	taula_dreta=cadena_fitxes_tirades[cadena_fitxes_tirades.length-2];
+	ja_s_ha_tirat=false;
+	//Bonjour surt sis doble
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (inici_jugador==3 && torn==3 && cadena_0_j3[fitxa]=="6" && cadena_1_j3[fitxa]=="6" && ja_s_ha_tirat!=true)
+			{
+			cadena_0_j3[fitxa]="";
+			cadena_1_j3[fitxa]="";
+			cadena_fitxes_tirades="|6:6|";
+			missatge=missatge+"<br>En Bonjour ha tirat el 6:6!";
+			ja_s_ha_tirat=true;
+			}
+		}	
+	//Bonjour
+	//doblar-se a ambdos cantons d'un sol cop
+	//esquerra
+	var doble_esquerra=1000;
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (cadena_0_j3[fitxa]==cadena_1_j3[fitxa] && cadena_0_j3[fitxa]==taula_esquerra)
+			{
+			doble_esquerra=fitxa;
+			}
+		}
+	//dreta
+	var doble_dreta=1000;
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (cadena_0_j3[fitxa]==cadena_1_j3[fitxa] && cadena_0_j3[fitxa]==taula_dreta)
+			{
+			doble_dreta=fitxa;
+			}
+		}
+	//tirar els dos dobles
+	if (doble_esquerra!=1000 && doble_dreta!=1000 && taula_esquerra!=taula_dreta)
+		{
+		cadena_fitxes_tirades="|"+cadena_0_j3[doble_esquerra]+":"+cadena_1_j3[doble_esquerra]+cadena_fitxes_tirades+cadena_0_j3[doble_dreta]+":"+cadena_1_j3[doble_dreta]+"|";
+		missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[doble_esquerra]+":"+cadena_1_j3[doble_esquerra]+" i el "+cadena_0_j3[doble_dreta]+":"+cadena_1_j3[doble_dreta]+"!!!!";
+		cadena_0_j3[doble_esquerra]="";
+		cadena_1_j3[doble_esquerra]="";
+		cadena_0_j3[doble_dreta]="";
+		cadena_1_j3[doble_dreta]="";
+		text_entrat="";
+		ja_s_ha_tirat=true;
+		}
+	//Bonjour
+	//identificar fitxes que es poden tirar marcant de guais el jugador (trampes de maquina)
+	var marcant_jugador_fitxes_tirables=new Array(7);
+	for (fitxa=0;fitxa<7;fitxa++)
+		{
+		if (cadena_0_j3[fitxa]==taula_esquerra)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_1_j3[fitxa]==cadena_0_j0[i] || cadena_1_j3[fitxa]==cadena_1_j0[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		if (cadena_0_j3[fitxa]==taula_dreta)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_1_j3[fitxa]==cadena_0_j0[i] || cadena_1_j3[fitxa]==cadena_1_j0[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;					
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		if (cadena_1_j3[fitxa]==taula_esquerra)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_0_j3[fitxa]==cadena_0_j0[i] || cadena_0_j3[fitxa]==cadena_1_j0[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		if (cadena_1_j3[fitxa]==taula_dreta)
+			{
+			for (i=0;i<7;i++)
+				{
+				if (cadena_0_j3[fitxa]==cadena_0_j0[i] || cadena_0_j3[fitxa]==cadena_1_j0[i])
+					{
+					marcant_jugador_fitxes_tirables[i]=true;					
+					}
+				else 
+					{
+					marcant_jugador_fitxes_tirables[i]=false;
+					}
+				}
+			}
+		}
+	//Bonjour
+	//intententar tirar amb mala llet (trampes maquina)
+	for (i=0;i<7;i++)
+		{
+		//esquerra
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_0_j3[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_1_j3[i]+":"+cadena_0_j3[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+			cadena_0_j3[i]="";
+			cadena_1_j3[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_1_j3[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_0_j3[i]+":"+cadena_1_j3[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+			cadena_0_j3[i]="";
+			cadena_1_j3[i]="";
+			ja_s_ha_tirat=true;
+			}
+		//dreta
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_0_j3[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_0_j3[i]+":"+cadena_1_j3[i]+"|";
+			missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+			cadena_0_j3[i]="";
+			cadena_1_j3[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (marcant_jugador_fitxes_tirables[i]==true && cadena_1_j3[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_1_j3[i]+":"+cadena_0_j3[i]+"|";
+			missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+			cadena_0_j3[i]="";
+			cadena_1_j3[i]="";
+			ja_s_ha_tirat=true;
+			}
+		}
+	//Bonjour
+	//intentar tirar pel canto mes alt (si es per l'esquerra) la fitxa mes alta
+	//esquerra
+	var pal_mes_alt_que_encaixa_esquerra_0=-1;
+	var pal_mes_alt_que_encaixa_esquerra_1=-1;
+	if (taula_esquerra>taula_dreta)
+		{
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j3[i]==taula_esquerra && cadena_0_j3[i]>=pal_mes_alt_que_encaixa_esquerra_0)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j3[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j3[i];
+				}
+			if (cadena_1_j3[i]==taula_esquerra && cadena_1_j3[i]>=pal_mes_alt_que_encaixa_esquerra_1)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j3[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j3[i];
+				}
+			}
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j3[i]==taula_esquerra && pal_mes_alt_que_encaixa_esquerra_0==cadena_0_j3[i] && pal_mes_alt_que_encaixa_esquerra_1==cadena_1_j3[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades="|"+cadena_1_j3[i]+":"+cadena_0_j3[i]+cadena_fitxes_tirades;
+				missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+				cadena_0_j3[i]="";
+				cadena_1_j3[i]="";
+				ja_s_ha_tirat=true;
+				}
+			if (cadena_1_j3[i]==taula_esquerra && pal_mes_alt_que_encaixa_esquerra_0==cadena_0_j3[i] && pal_mes_alt_que_encaixa_esquerra_1==cadena_1_j3[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades="|"+cadena_0_j3[i]+":"+cadena_1_j3[i]+cadena_fitxes_tirades;
+				missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+				cadena_0_j3[i]="";
+				cadena_1_j3[i]="";
+				ja_s_ha_tirat=true;
+				}
+			}
+		}
+	//Bonjour
+	//intentar tirar pel canto mes alt (si es per la dreta) la fitxa mes alta
+	//dreta
+	var pal_mes_alt_que_encaixa_dreta_0=-1;
+	var pal_mes_alt_que_encaixa_dreta_1=-1;
+	if (taula_esquerra<taula_dreta)
+		{
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j3[i]==taula_dreta && cadena_0_j3[i]>=pal_mes_alt_que_encaixa_esquerra_0)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j3[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j3[i];
+				}
+			if (cadena_1_j3[i]==taula_dreta && cadena_1_j3[i]>=pal_mes_alt_que_encaixa_esquerra_1)
+				{
+				pal_mes_alt_que_encaixa_esquerra_0=cadena_0_j3[i];
+				pal_mes_alt_que_encaixa_esquerra_1=cadena_1_j3[i];
+				}
+			}
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j3[i]==taula_dreta && pal_mes_alt_que_encaixa_dreta_0==cadena_0_j3[i] && pal_mes_alt_que_encaixa_dreta_1==cadena_1_j3[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_1_j3[i]+":"+cadena_0_j3[i]+"|";
+				missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+				cadena_0_j3[i]="";
+				cadena_1_j3[i]="";
+				ja_s_ha_tirat=true;
+				}
+			if (cadena_1_j3[i]==taula_dreta && pal_mes_alt_que_encaixa_dreta_0==cadena_0_j3[i] && pal_mes_alt_que_encaixa_dreta_1==cadena_1_j3[i] && ja_s_ha_tirat!=true)
+				{
+				cadena_fitxes_tirades="|"+cadena_0_j3[i]+":"+cadena_1_j3[i]+cadena_fitxes_tirades;
+				missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+				cadena_0_j3[i]="";
+				cadena_1_j3[i]="";
+				ja_s_ha_tirat=true;
+				}
+			}
+		}
+	//Bonjour tira el que pot
+	for (i=0;i<7;i++)
+		{
+		if (cadena_0_j3[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_0_j3[i]+":"+cadena_1_j3[i]+"|";
+			missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+			cadena_0_j3[i]="";
+			cadena_1_j3[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (cadena_1_j3[i]==taula_dreta && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades=cadena_fitxes_tirades+cadena_1_j3[i]+":"+cadena_0_j3[i]+"|";
+			missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+			cadena_0_j3[i]="";
+			cadena_1_j3[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (cadena_0_j3[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_1_j3[i]+":"+cadena_0_j3[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+			cadena_0_j3[i]="";
+			cadena_1_j3[i]="";
+			ja_s_ha_tirat=true;
+			}
+		if (cadena_1_j3[i]==taula_esquerra && ja_s_ha_tirat!=true)
+			{
+			cadena_fitxes_tirades="|"+cadena_0_j3[i]+":"+cadena_1_j3[i]+cadena_fitxes_tirades;
+			missatge=missatge+"<br>En Bonjour ha tirat el "+cadena_0_j3[i]+":"+cadena_1_j3[i]+"!";
+			cadena_0_j3[i]="";
+			cadena_1_j3[i]="";
+			ja_s_ha_tirat=true;
+			}
+		}
+	//Bonjour passa
+	possibilitat_de_tirar=0;
+	if(torn==3 && ja_s_ha_tirat!=true)
+		{
+		for (fitxa=0;fitxa<7;fitxa++)
+			{
+			if (cadena_0_j3[fitxa]==taula_esquerra || cadena_0_j3[fitxa]==taula_dreta || cadena_1_j3[fitxa]==taula_esquerra || cadena_1_j3[fitxa]==taula_dreta)
+				{
+				possibilitat_de_tirar++;				
+				}
+			}
+		if (possibilitat_de_tirar==0)
+			{
+			missatge=missatge+"<br>En Bonjour ha passat!";
+			s_ha_passat=true;
+			ja_s_ha_tirat=true;
+			}
+		}
+	if (ja_s_ha_tirat==true)
+		{
+		passar_un_torn();
+		}
+	}
+function comprovar_victoria_huma()
+	{
+	if (torn!=1000)
+		{
+		numero_de_fitxes_ja_tirades=0;
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j0[i]=="" && cadena_1_j0[i]=="")
+				{
+				numero_de_fitxes_ja_tirades++;
+				}
+			}
+		if (numero_de_fitxes_ja_tirades==7)
+			{
+			missatge=missatge+"<br>Has guanyat tu!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		}
+	}
+function comprovar_victoria_antonio()
+	{
+	if (torn!=1000)
+		{
+		numero_de_fitxes_ja_tirades=0;
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j1[i]=="" && cadena_1_j1[i]=="")
+				{
+				numero_de_fitxes_ja_tirades++;
+				}
+			}
+		if (numero_de_fitxes_ja_tirades==7)
+			{
+			missatge=missatge+"<br>L'Antonio ha guanyat!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		}
+	}
+function comprovar_victoria_ramone()
+	{
+	if (torn!=1000)
+		{
+		numero_de_fitxes_ja_tirades=0;
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j2[i]=="" && cadena_1_j2[i]=="")
+				{
+				numero_de_fitxes_ja_tirades++;
+				}
+			}
+		if (numero_de_fitxes_ja_tirades==7)
+			{
+			missatge=missatge+"<br>En Ramone ha guanyat!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		}
+	}
+function comprovar_victoria_bonjour()
+	{
+	if (torn!=1000)
+		{
+		numero_de_fitxes_ja_tirades=0;
+		for (i=0;i<7;i++)
+			{
+			if (cadena_0_j3[i]=="" && cadena_1_j3[i]=="")
+				{
+				numero_de_fitxes_ja_tirades++;
+				}
+			}
+		if (numero_de_fitxes_ja_tirades==7)
+			{
+			missatge=missatge+"<br>En bonjour ha guanyat!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		}
+	}
+function tencat()
+	{
+	if(torn==0 && ja_s_ha_tirat==true)
+		{
+		if (numero_de_jugadors_que_passen_seguit<4 && s_ha_passat==true)
+			{
+			numero_de_jugadors_que_passen_seguit++;
+//			s_ha_passat=false;
+			ja_s_ha_tirat=true;
+			recarregar();
+			}
+		if (s_ha_passat!=true)
+			{
+			numero_de_jugadors_que_passen_seguit=0;
+			s_ha_passat=false;
+			ja_s_ha_tirat=false;
+			recarregar();
+			}
+		}
+	if(torn==1 && ja_s_ha_tirat==true)
+		{
+		if (numero_de_jugadors_que_passen_seguit<4 && s_ha_passat==true)
+			{
+			numero_de_jugadors_que_passen_seguit++;
+			s_ha_passat=false;
+			ja_s_ha_tirat=false;
+			preparat_per_tirar();
+			}
+		if (s_ha_passat!=true)
+			{
+			numero_de_jugadors_que_passen_seguit=0;
+			s_ha_passat=false;
+			ja_s_ha_tirat=false;
+			preparat_per_tirar();
+			}
+		}
+	if(torn==2 && ja_s_ha_tirat==true)
+		{
+		if (numero_de_jugadors_que_passen_seguit<4 && s_ha_passat==true)
+			{
+			numero_de_jugadors_que_passen_seguit++;
+			s_ha_passat=false;
+			ja_s_ha_tirat=false;
+			preparat_per_tirar();
+			}
+		if (s_ha_passat!=true)
+			{
+			numero_de_jugadors_que_passen_seguit=0;
+			s_ha_passat=false;
+			ja_s_ha_tirat=false;
+			preparat_per_tirar();
+			}
+		}
+	if(torn==3 && ja_s_ha_tirat==true) 
+		{
+		if (numero_de_jugadors_que_passen_seguit<4 && s_ha_passat==true)
+			{
+			numero_de_jugadors_que_passen_seguit++;
+			s_ha_passat=false;
+			ja_s_ha_tirat=false;
+			preparat_per_tirar();
+			}
+		if (s_ha_passat!=true)
+			{
+			numero_de_jugadors_que_passen_seguit=0;
+			s_ha_passat=false;
+			ja_s_ha_tirat=false;
+			preparat_per_tirar();
+			}
+		}
+
+	if (numero_de_jugadors_que_passen_seguit>3 && s_ha_passat==true && torn<4)
+		{
+		missatge=missatge+"<br>S'ha tencat!!!!";
+		var punts_j0=0;
+		var punts_j1=0;
+		var punts_j2=0;
+		var punts_j3=0;
+		for (i=0;i<7;i++)
+			{
+			if ((cadena_0_j0[i]!="")){punts_j0=parseInt(punts_j0)+parseInt(cadena_0_j0[i]);}
+			if ((cadena_1_j0[i]!="")){punts_j0=parseInt(punts_j0)+parseInt(cadena_1_j0[i]);}
+			if ((cadena_0_j1[i]!="")){punts_j1=parseInt(punts_j1)+parseInt(cadena_0_j1[i]);}
+			if ((cadena_1_j1[i]!="")){punts_j1=parseInt(punts_j1)+parseInt(cadena_1_j1[i]);}
+			if ((cadena_0_j2[i]!="")){punts_j2=parseInt(punts_j2)+parseInt(cadena_0_j2[i]);}
+			if ((cadena_1_j2[i]!="")){punts_j2=parseInt(punts_j2)+parseInt(cadena_1_j2[i]);}
+			if ((cadena_0_j3[i]!="")){punts_j3=parseInt(punts_j3)+parseInt(cadena_0_j3[i]);}
+			if ((cadena_1_j3[i]!="")){punts_j3=parseInt(punts_j3)+parseInt(cadena_1_j3[i]);}
+			}
+		//cas que no hi hagi empat
+		missatge=missatge+"<br>Tu tens "+punts_j0+" punts.<br>L'Antonio te "+punts_j1+" punts.<br>En Ramone te "+punts_j2+" punts.<br>I en Bonjour te "+punts_j3+" punts.";
+		if (punts_j0<punts_j1 && punts_j0<punts_j2 && punts_j0<punts_j3){missatge=missatge+"<br>Has guanyat tu!!!!";la_partida_s_ha_acavat=true;torn=1000;recarregar();}
+		if (punts_j1<punts_j0 && punts_j1<punts_j2 && punts_j1<punts_j3){missatge=missatge+"<br>L'Antonio ha guanyat!!!!";la_partida_s_ha_acavat=true;torn=1000;recarregar();}
+		if (punts_j2<punts_j1 && punts_j2<punts_j0 && punts_j2<punts_j3){missatge=missatge+"<br>En Ramone ha guanyat!!!!";la_partida_s_ha_acavat=true;torn=1000;recarregar();}
+		if (punts_j3<punts_j1 && punts_j3<punts_j2 && punts_j3<punts_j0){missatge=missatge+"<br>En Bonjour ha guanyat!!!!";la_partida_s_ha_acavat=true;torn=1000;recarregar();}
+		//en cas d'empat a punts dos jugadors
+		//j0 empata amb j1
+		if (punts_j0==punts_j1 && punts_j0<punts_j2 && punts_j0<punts_j3 && (inici_jugador==0 || inici_jugador==3 || inici_jugador==2))
+			{
+			missatge=missatge+"<br>Has guanyat tu!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		if (punts_j0==punts_j1 && punts_j1<punts_j2 && punts_j1<punts_j3 && (inici_jugador==1))
+			{
+			missatge=missatge+"<br>L'Antonio ha guanyat!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		//j1 empata amb j2
+		if (punts_j1==punts_j2 && punts_j1<punts_j0 && punts_j1<punts_j3 && (inici_jugador==1 || inici_jugador==0 || inici_jugador==3))
+			{
+			missatge=missatge+"<br>L'Antonio ha guanyat!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		if (punts_j2==punts_j1 && punts_j2<punts_j0 && punts_j2<punts_j3 && (inici_jugador==2))
+			{
+			missatge=missatge+"<br>En Ramone ha guanyat!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		//j2 empata amb j3
+		if (punts_j2==punts_j3 && punts_j2<punts_j0 && punts_j2<punts_j1 && (inici_jugador==2 || inici_jugador==1 || inici_jugador==0))
+			{
+			missatge=missatge+"<br>En Ramone ha guanyat!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		if (punts_j3==punts_j2 && punts_j3<punts_j0 && punts_j3<punts_j1 && (inici_jugador==3))
+			{
+			missatge=missatge+"<br>En Bonjour ha guanyat!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		//j3 empata amb j0
+		if (punts_j3==punts_j0 && punts_j3<punts_j1 && punts_j3<punts_j2 && (inici_jugador==3 || inici_jugador==2 || inici_jugador==1))
+			{
+			missatge=missatge+"<br>En Bonjour ha guanyat!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		if (punts_j0==punts_j3 && punts_j0<punts_j1 && punts_j0<punts_j2 && (inici_jugador==0))
+			{
+			missatge=missatge+"<br>Has guanyat tu!!!!";
+			la_partida_s_ha_acavat=true;
+			torn=1000;
+			recarregar();
+			}
+		//en cas de trible empat
+		//empata j0 j1 j2
+		if (punts_j0==punts_j1 && punts_j1==punts_j2 && punts_j2==punts_j0 && punts_j0<punts_j3)
+			{
+			if (inici_jugador==0 || inici_jugador==3)
+				{
+				missatge=missatge+"<br>Has guanyat tu!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==1)
+				{
+				missatge=missatge+"<br>L'Antonio ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==2)
+				{
+				missatge=missatge+"<br>En Ramone ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}	
+			}
+		if (punts_j1==punts_j2 && punts_j2==punts_j3 && punts_j3==punts_j1 && punts_j1<punts_j0)
+			{
+			if (inici_jugador==1 || inici_jugador==0)
+				{
+				missatge=missatge+"<br>L'Antonio ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==2)
+				{
+				missatge=missatge+"<br>En Ramone ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==3)
+				{
+				missatge=missatge+"<br> En Bonjour ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}	
+			}
+		if (punts_j2==punts_j3 && punts_j2==punts_j0 && punts_j3==punts_j0 && punts_j2<punts_j1)
+			{
+			if (inici_jugador==2 || inici_jugador==1)
+				{
+				missatge=missatge+"<br>En Ramone ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==3)
+				{
+				missatge=missatge+"<br>En Bonjour ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==0)
+				{
+				missatge=missatge+"<br>Has guanyat tu!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}	
+			}
+		if (punts_j3==punts_j0 && punts_j3==punts_j2 && punts_j2==punts_j0 && punts_j3<punts_j1)
+			{
+			if (inici_jugador==3 || inici_jugador==2)
+				{
+				missatge=missatge+"<br>En Bonjour ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==0)
+				{
+				missatge=missatge+"<br>Has guanyat tu!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==1)
+				{
+				missatge=missatge+"<br>L'Antonio ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}	
+			}
+		//empaten els 4 jugadors (tots)
+		if (punts_j0==punts_j1 && punts_j1==punts_j2 && punts_j2==punts_j3 && punts_j3==punts_j0)
+			{
+			if (inici_jugador==0)
+				{
+				missatge=missatge+"<br>Has guanyat tu!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==1)
+				{
+				missatge=missatge+"<br>L'Antonio ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==2)
+				{
+				missatge=missatge+"<br>En Ramone ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			if (inici_jugador==3)
+				{
+				missatge=missatge+"<br>En Bonjour ha guanyat!!!!";
+				la_partida_s_ha_acavat=true;
+				torn=1000;
+				recarregar();
+				}
+			}
+		}	
+	}
+function netejar_seleccio()
+	{
+	text_entrat0="";
+	text_entrat1="";
+	for	(i=0;i<7;i++)
+		{
+		if (seleccionat_j0[i]=="seleccionada")
+			{
+			seleccionat_j0[i]="no_seleccionada"; 
+			}
+		}
+	}
+function tirar()
+	{
+/*
+	if(torn==0 && ja_s_ha_tirat!=true){tirar_huma();comprovar_victoria_huma();tencat();}
+	if(torn==1 && ja_s_ha_tirat!=true){netejar_seleccio();tirar_antonio();comprovar_victoria_antonio();tencat();}
+	if(torn==2 && ja_s_ha_tirat!=true){netejar_seleccio();tirar_ramone();comprovar_victoria_ramone();tencat();}
+	if(torn==3 && ja_s_ha_tirat!=true){netejar_seleccio();tirar_bonjour();comprovar_victoria_bonjour();tencat();}
+*/
+
+
+/*
+if (inici_jugador!=0)
+	{
+	ja_ha_tirat=false;
+	if(torn==1 && ja_ha_tirat==false){ja_ha_tirat=true;netejar_seleccio();tirar_antonio();comprovar_victoria_antonio();tencat();}
+	if(torn==2 && ja_ha_tirat==false){ja_ha_tirat=true;netejar_seleccio();tirar_ramone();comprovar_victoria_ramone();tencat();}
+	if(torn==3 && ja_ha_tirat==false){ja_ha_tirat=true;netejar_seleccio();tirar_bonjour();comprovar_victoria_bonjour();tencat();}
+	}
+if(torn==0 && ja_s_ha_tirat!=true){tirar_huma();comprovar_victoria_huma();tencat();netejar_seleccio();tirar_antonio();comprovar_victoria_antonio();tencat();netejar_seleccio();tirar_ramone();comprovar_victoria_ramone();tencat();netejar_seleccio();tirar_bonjour();comprovar_victoria_bonjour();tencat();}
+
+*/
+	if (inici_jugador!=0)
+		{
+		if(torn==1 && ja_ha_tirat==false){ja_ha_tirat=true;netejar_seleccio();tirar_antonio();comprovar_victoria_antonio();tencat();}
+		if(torn==2 && ja_ha_tirat==false){ja_ha_tirat=true;netejar_seleccio();tirar_ramone();comprovar_victoria_ramone();tencat();}
+		if(torn==3 && ja_ha_tirat==false){ja_ha_tirat=true;netejar_seleccio();tirar_bonjour();comprovar_victoria_bonjour();tencat();}
+		}
+	if(torn==0 && ja_s_ha_tirat!=true)
+		{
+		tirar_huma();comprovar_victoria_huma();tencat();
+		}
+	if(torn==1 && ja_s_ha_tirat!=true)
+		{
+		netejar_seleccio();tirar_antonio();comprovar_victoria_antonio();tencat();
+		}
+	if(torn==2 && ja_s_ha_tirat!=true)
+		{
+		netejar_seleccio();tirar_ramone();comprovar_victoria_ramone();tencat();
+		}
+	if(torn==3 && ja_s_ha_tirat!=true)
+		{
+		netejar_seleccio();tirar_bonjour();comprovar_victoria_bonjour();tencat();
+		}
+	}
+function preparat_per_tirar()
+	{
+	if (la_partida_s_ha_acavat!=true && torn<4)
+		{
+		tirar();
+		}
+	else
+		{
+		torn=1000;
+		}	
+	}
+function contar_fitxes_jugadors()
+	{
+	for (i=0;i<7;i++)
+		{
+		if (cadena_0_j0[i]!="" && cadena_1_j0[i]!="")
+			{
+			num_fitxes_j0++;
+			}
+		}
+	for (i=0;i<7;i++)
+		{
+		if (cadena_0_j1[i]!="" && cadena_1_j1[i]!="")
+			{
+			num_fitxes_j1++;
+			}
+		}
+	for (i=0;i<7;i++)
+		{
+		if (cadena_0_j2[i]!="" && cadena_1_j2[i]!="")
+			{
+			num_fitxes_j2++;
+			}
+		}
+	for (i=0;i<7;i++)
+		{
+		if (cadena_0_j3[i]!="" && cadena_1_j3[i]!="")
+			{
+			num_fitxes_j3++;
+			}
+		}
+	}
+function seleccionar_desseleccionar(id_clicat)
+	{
+	if (seleccionat_j0[id_clicat]=="seleccionada")
+		{
+		seleccionat_j0[id_clicat]="no_seleccionada";
+        document.getElementById(id_clicat).style.backgroundColor="black";
+		if (text_entrat0!="" && text_entrat1!="")
+			{
+			text_entrat0=text_entrat1;
+			text_entrat1="";
+			}
+		//recarregar();
+		}
+	else if (seleccionat_j0[id_clicat]=="no_seleccionada" && text_entrat1=="")
+		{
+		seleccionat_j0[id_clicat]="seleccionada";
+		if (text_entrat0!="")
+			{
+			text_entrat1=cadena_0_j0[id_clicat]+":"+cadena_1_j0[id_clicat];
+	    	document.getElementById(id_clicat).style.backgroundColor="lightblue";
+			}
+		if (text_entrat0=="")
+			{
+			text_entrat0=cadena_0_j0[id_clicat]+":"+cadena_1_j0[id_clicat];
+	   		document.getElementById(id_clicat).style.backgroundColor="lightblue";
+			}
+		//recarregar();
+		}
+	}
+function text_resultant_esquerra()
+	{
+	if (text_entrat0!="6:6")
+		{
+		text_entrat=text_entrat0+"e";
+		text_entrat0="";
+		text_entrat1="";
+		for	(i=0;i<7;i++)
+			{
+			if (seleccionat_j0[i]=="seleccionada")
+				{
+				seleccionat_j0[i]="no_seleccionada";
+				}
+			}
+		}
+	if (text_entrat0=="6:6")
+		{
+		text_entrat=text_entrat0;
+		text_entrat0="";
+		text_entrat1="";
+		for	(i=0;i<7;i++)
+			{
+			if (seleccionat_j0[i]=="seleccionada")
+				{
+				seleccionat_j0[i]="no_seleccionada";
+				}
+			}
+		}
+	taula_esquerra=cadena_fitxes_tirades[1];
+	if ((text_entrat[0]!=taula_esquerra && text_entrat[2]!=taula_esquerra && cadena_fitxes_tirades!="|") || ((text_entrat[0]!="6" && text_entrat[2]!="6") && cadena_fitxes_tirades=="|"))
+		{
+		if ((text_entrat[0]!="6" && text_entrat[2]!="6") && cadena_fitxes_tirades=="|")
+			{
+			missatge=missatge+"<br>El que has tirat no es correcte!!!!<br>Tens el 6:6!!!!<br>Has de sortir amb aquesta fitxa!!!!";
+			recarregar();
+			}
+		if (text_entrat[0]!=taula_esquerra && text_entrat[2]!=taula_esquerra && cadena_fitxes_tirades!="|")
+			{
+			missatge=missatge+"<br>El que has tirat no es correcte!!!!<br>Torna a tirar!!!!";
+			recarregar();
+			}
+		}
+	}
+function text_resultant_dreta()
+	{
+	if (text_entrat0!="6:6")
+		{
+		text_entrat=text_entrat0+"d";
+		text_entrat0="";
+		text_entrat1="";
+		for	(i=0;i<7;i++)
+			{
+			if (seleccionat_j0[i]=="seleccionada")
+				{
+				seleccionat_j0[i]="no_seleccionada";
+				}
+			}
+		}	
+	if (text_entrat0=="6:6")
+		{
+		text_entrat=text_entrat0;
+		text_entrat0="";
+		text_entrat1="";
+		for	(i=0;i<7;i++)
+			{
+			if (seleccionat_j0[i]=="seleccionada")
+				{
+				seleccionat_j0[i]="no_seleccionada";
+				}
+			}
+		}
+	taula_dreta=cadena_fitxes_tirades[cadena_fitxes_tirades.length-2];
+	if ((text_entrat[0]!=taula_dreta && text_entrat[2]!=taula_dreta && cadena_fitxes_tirades!="|") || ((text_entrat[0]!="6" && text_entrat[2]!="6") && cadena_fitxes_tirades=="|"))
+		{
+		if ((text_entrat[0]!="6" && text_entrat[2]!="6") && cadena_fitxes_tirades=="|")
+			{
+			missatge=missatge+"<br>El que has tirat no es correcte!!!!<br>Tens el 6:6!!!!<br>Has de sortir amb aquesta fitxa!!!!";
+			recarregar();
+			}
+		if (text_entrat[0]!=taula_dreta && text_entrat[2]!=taula_dreta && cadena_fitxes_tirades!="|")
+			{
+			missatge=missatge+"<br>El que has tirat no es correcte!!!!<br>Torna a tirar!!!!";
+			recarregar();
+			}
+		}
+	}
+function text_resultant_passo()
+	{
+	text_entrat="passo";
+	text_entrat0="";
+	text_entrat1="";
+	for	(i=0;i<7;i++)
+		{
+		if (seleccionat_j0[i]=="seleccionada")
+			{
+			seleccionat_j0[i]="no_seleccionada";
+			}
+		}	
+	taula_esquerra=cadena_fitxes_tirades[1];
+	taula_dreta=cadena_fitxes_tirades[cadena_fitxes_tirades.length-2];	
+	possibilitat_de_tirar=0;
+	if(torn==0 && (text_entrat=="passo" || text_entrat=="Passo" || text_entrat=="PASSO"))
+		{
+		for (fitxa=0;fitxa<7;fitxa++)
+			{
+			if (cadena_0_j0[fitxa]==taula_esquerra || cadena_0_j0[fitxa]==taula_dreta || cadena_1_j0[fitxa]==taula_esquerra || cadena_1_j0[fitxa]==taula_dreta)
+				{
+				possibilitat_de_tirar++;				
+				}
+			}
+		if (possibilitat_de_tirar>0)
+			{
+			missatge=missatge+"<br>No has de passar!<br>pots tirar alguna fitxa."; 
+			recarregar();
+			}
+		}
+	if (inici_jugador==0 && text_entrat0[0]!="6"  && text_entrat0[2]!="6" && cadena_fitxes_tirades=="|")
+		{
+		missatge=missatge+"<br>tens el 6:6!!!!<br>Has de sortir amb aquesta fitxa!!!!"; 
+		recarregar();
+		}
+	}
+function text_resutant_doblar_dos_dobles()
+	{
+	if (text_entrat0!="" && text_entrat1!="")
+		{
+		if (text_entrat0[0]==cadena_fitxes_tirades[1] && text_entrat1[0]==cadena_fitxes_tirades[cadena_fitxes_tirades.length-2])
+			{
+			text_entrat=text_entrat0+"e"+text_entrat1+"d";
+			}
+		if (text_entrat1[0]==cadena_fitxes_tirades[1] && text_entrat0[0]==cadena_fitxes_tirades[cadena_fitxes_tirades.length-2])
+			{
+			text_entrat=text_entrat1+"e"+text_entrat0+"d";
+			}
+		else 
+			{
+			missatge=missatge+"<br>El que has tirat no es correcte!!!!<br>Torna a tirar!!!!";
+			recarregar();
+			}
+		text_entrat0="";
+		text_entrat1="";
+		for	(i=0;i<7;i++)
+			{
+			if (seleccionat_j0[i]=="seleccionada")
+				{
+				seleccionat_j0[i]="no_seleccionada";
+				}
+			}
+		
+		}
+	else
+		{
+		missatge=missatge+"<br>El que has tirat no es correcte!!!!<br>Torna a tirar!!!!";
+		recarregar();
+		}
+	}
+function invertir(cadena) 
+	{
+    var longitut=cadena.length-1;
+   	var cadena_invertida="";
+	while (longitut>=0) 
+		{
+       	cadena_invertida=cadena_invertida+cadena[longitut];
+   		longitut--;
+   		}
+   	return cadena_invertida;
+	}
+function tamany_taula_fitxes_tirades()
+	{
+	var cadena_fitxes_tirades_esquerra_previa=cadena_fitxes_tirades.split("6:6",1);
+	cadena_fitxes_tirades_esquerra=invertir(cadena_fitxes_tirades_esquerra_previa);
+	cadena_fitxes_tirades_esquerra=invertir(cadena_fitxes_tirades_esquerra);
+	var cadena_fitxes_tirades_invertida=invertir(cadena_fitxes_tirades);
+	var cadena_fitxes_tirades_dreta_previa=cadena_fitxes_tirades_invertida.split("6:6",1);
+	cadena_fitxes_tirades_dreta=invertir(cadena_fitxes_tirades_dreta_previa);
+	cadena_fitxes_tirades_dreta=invertir(cadena_fitxes_tirades_dreta);
+	var longitut_esquerra=cadena_fitxes_tirades_esquerra.length-1;
+	while (longitut_esquerra>=0)
+		{
+		if(cadena_fitxes_tirades_esquerra[longitut_esquerra]==":")
+			{
+			conta_esquerra++;
+			}
+		longitut_esquerra--;
+		} 
+	var longitut_dreta=cadena_fitxes_tirades_dreta.length-1;
+	while (longitut_dreta>=0)
+		{
+		if(cadena_fitxes_tirades_dreta[longitut_dreta]==":")
+			{
+			conta_dreta++;
+			}
+		longitut_dreta--;
+		} 
+	}
+if (ja_s_ha_repartit=="undefined")
+	{
+	repartir();
+	ja_s_ha_repartit="true";
+	cinc_dobles();
+	sis_doble();
+	if (!(doblesj0==5 || doblesj1==5 || doblesj2==5 || doblesj3==5 || doblesj0==6 || doblesj1==6 || doblesj2==6 || doblesj3==6 || doblesj0==7 || doblesj1==7 || doblesj2==7 || doblesj3==7))
+		{
+		missatge="<br>Que guanyi el millor!";
+		cadena_fitxes_tirades="|";
+		recarregar();
+		}
+	}
+		</script>
+	</head>
+	<body>
+    <!--[if IE]>
+    <p>
+      Navegador: Internet Explorer.
+      <br>
+      Aquest navegador no permet visualitzar la pàgina correctament.
+    </p>
+    <![endif]-->
+    <noscript>
+      <div style="border: 1px solid purple; padding: 10px">
+        <span style="color:red">JavaScript no activat!</span>
+        <br>
+        <span style="color:red">Per veure be la pàgina,</span>
+        <br>
+        <span style="color:red">activa'l al teu navegador!</span>
+      </div>
+    </noscript>
+	<div class="general">
+	<table>
+	<tr>
+	<td>
+	<script type="text/javascript">
+	</script>
+	<h1>Dòmino</h1>
+	<button onClick="document.cookie='string_variables='; document.location.href = document.location.pathname;" style="position:absolute; left: 224px; top: 30px; ">Reiniciar partida</button>
+	</td>
+	</tr>
+	<tr>
+	<td style="position:relative;">
+	<div style="border: 2px solid white; background-color:darkgreen;">
+
+	<script type="text/javascript">	
+	tamany_taula_fitxes_tirades();
+	var corrector_posicional;
+	if(conta_esquerra>conta_dreta && conta_esquerra!=conta_dreta)
+		{
+		document.write("<div style='height:"+((conta_esquerra*30)+100)+"px;  '>");
+		corrector_posicional=conta_esquerra*30;
+		}
+	if(conta_esquerra<conta_dreta && conta_esquerra!=conta_dreta)
+		{
+		document.write("<div style='height:"+((conta_dreta*30)+100)+"px;  '>");	
+		corrector_posicional=conta_dreta*30;
+		}
+	if(conta_esquerra==conta_dreta)
+		{
+		document.write("<div style='height:"+((conta_esquerra*30)+100)+"px; '>");
+		corrector_posicional=conta_esquerra*30;
+		}
+	var cadena_fitxes_tirades_esquerra_previa=cadena_fitxes_tirades.split("6:6",1);
+	cadena_fitxes_tirades_esquerra=invertir(cadena_fitxes_tirades_esquerra_previa);
+	cadena_fitxes_tirades_esquerra=invertir(cadena_fitxes_tirades_esquerra);
+	var cadena_fitxes_tirades_invertida=invertir(cadena_fitxes_tirades);
+	var cadena_fitxes_tirades_dreta_previa=cadena_fitxes_tirades_invertida.split("6:6",1);
+	cadena_fitxes_tirades_dreta=invertir(cadena_fitxes_tirades_dreta_previa);
+	cadena_fitxes_tirades_dreta=invertir(cadena_fitxes_tirades_dreta);
+//window.alert("cadenaesquerra="+cadena_fitxes_tirades_esquerra+" cadenadreta="+cadena_fitxes_tirades_dreta);
+	//sis doble
+	for(i=0;i<cadena_fitxes_tirades.length;i++)
+		{
+		if (cadena_fitxes_tirades[i]=="6" && cadena_fitxes_tirades[i+1]==":" && cadena_fitxes_tirades[i+2]=="6")
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(180-10)+"px; top: "+(70+corrector_posicional)+"px;'>");
+			continue;
+			}
+		if (cadena_fitxes_tirades[i]=="6" && cadena_fitxes_tirades[i-1]==":" && cadena_fitxes_tirades[i-2]=="6")
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(180-10)+"px; top: "+((70+corrector_posicional)-20)+"px;'>");
+			continue;
+			}
+		}
+	//fitxes fila sis doble esquerra
+	var coordenada_left=170;
+	var coordenada_top=60+corrector_posicional;
+	var incrementador_left=-20;
+	var derrera_doble=true;
+	for (i=0;i<(12+1);i++)//tres fitxes a l esquerra del sis doble
+		{
+//window.alert("i="+i+" cadena_fitxes_tirades_esquerra[i]="+cadena_fitxes_tirades_esquerra[i]);
+		//fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_esquerra[i-1]=="|" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i+2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+coordenada_top+"px;'>");
+			incrementador_left=incrementador_left-20;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_esquerra[i-1]==":" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+coordenada_top+"px;'>");
+			incrementador_left=incrementador_left-20;
+			derrera_doble=false;
+			continue;
+			}
+		//fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_esquerra[i-1]=="|" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i+2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+coordenada_top+"px;'>");
+			incrementador_left=incrementador_left-20;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_esquerra[i-1]==":" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+coordenada_top+"px;'>");
+			incrementador_left=incrementador_left-20;
+			derrera_doble=false;
+			continue;
+			}
+		//dobles
+		if (cadena_fitxes_tirades_esquerra[i-1]=="|" && cadena_fitxes_tirades_esquerra[i]==cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top-10)+"px;'>");
+			continue;
+			}
+			
+		//segona meitat per les fitxes dobles
+		if (cadena_fitxes_tirades_esquerra[i-1]==":" && cadena_fitxes_tirades_esquerra[i]==cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top:"+(coordenada_top+10)+"px;'>");
+			derrera_doble=true;
+			if(i!=11)
+			incrementador_left=incrementador_left-20;
+			continue;
+			}
+		}	
+	incrementador_top=0;
+	for (i=12;i<(16+1);i++)//esquerra del sis doble adaptacio per pujar
+		{
+		//fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_esquerra[i-1]=="|" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i+2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top)+"px;'>");
+			incrementador_top=incrementador_top-20;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_esquerra[i-1]==":" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			if(i!=11)
+			incrementador_top=incrementador_top-20;			
+			derrera_doble=false;
+			continue;
+			}
+		//fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_esquerra[i-1]=="|" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i+2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top-30)+"px;'>");
+			incrementador_top=incrementador_top-50;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_esquerra[i-1]==":" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			incrementador_top=incrementador_top-20;
+			derrera_doble=false;
+			continue;
+			}
+		//doble
+		if (cadena_fitxes_tirades_esquerra[i-1]=="|" && cadena_fitxes_tirades_esquerra[i]==cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top-10)+"px;'>");
+			continue;
+			}
+		//segona meitat per les fitxes dobles
+		if (cadena_fitxes_tirades_esquerra[i-1]==":" && cadena_fitxes_tirades_esquerra[i]==cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top:"+(coordenada_top+10)+"px;'>");
+			derrera_doble=true;
+			incrementador_top=incrementador_top-30;
+			continue;
+			}
+		}
+/////////////
+	for (i=16;i<(cadena_fitxes_tirades_esquerra.length);i++)//esquerra del sis doble anar per pujant
+		{
+		//fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_esquerra[i-1]=="|" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i+2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			incrementador_top=incrementador_top-20;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_esquerra[i-1]==":" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			incrementador_top=incrementador_top-20;
+			derrera_doble=false;
+			continue;
+			}
+		//fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_esquerra[i-1]=="|" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i+2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			if(i==17)
+			incrementador_top=incrementador_top-20;
+			else
+			incrementador_top=incrementador_top-20;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_esquerra[i-1]==":" && cadena_fitxes_tirades_esquerra[i]!=cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			if (i==18)
+			incrementador_top=incrementador_top-20;
+			else
+			incrementador_top=incrementador_top-20;
+			derrera_doble=false;
+			continue;
+			}
+		//doble
+		if (cadena_fitxes_tirades_esquerra[i-1]=="|" && cadena_fitxes_tirades_esquerra[i]==cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left+(-10))+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			continue;
+			}
+		//segona meitat per les fitxes dobles
+		if (cadena_fitxes_tirades_esquerra[i-1]==":" && cadena_fitxes_tirades_esquerra[i]==cadena_fitxes_tirades_esquerra[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_esquerra[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left+(10))+"px; top:"+(coordenada_top+incrementador_top)+"px;'>");
+			derrera_doble=true;
+			incrementador_top=incrementador_top-20;
+			continue;
+			}
+		}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//fitxes fila sis doble dreta
+	var coordenada_left=170;
+	var coordenada_top=60+corrector_posicional;
+	var incrementador_left=20;
+	var derrera_doble=true;
+	for (i=0;i<(12+1);i++)//tres fitxes a l dreta del sis doble
+		{
+//window.alert("i="+i+" cadena_fitxes_tirades_dreta[i]="+cadena_fitxes_tirades_dreta[i]);
+		//fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_dreta[i-1]=="|" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i+2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+coordenada_top+"px;'>");
+			incrementador_left=incrementador_left+20;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_dreta[i-1]==":" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top)+"px;'>");
+			incrementador_left=incrementador_left+20;
+			derrera_doble=false;
+			continue;
+			}
+		//fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_dreta[i-1]=="|" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i+2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top)+"px;'>");
+			incrementador_top=incrementador_top-20-10;
+			incrementador_left=incrementador_left+20;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_dreta[i-1]==":" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i-2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+coordenada_top+"px;'>");
+			incrementador_left=incrementador_left+20;
+			derrera_doble=false;
+			continue;
+			}
+		//dobles
+		if (cadena_fitxes_tirades_dreta[i-1]=="|" && cadena_fitxes_tirades_dreta[i]==cadena_fitxes_tirades_dreta[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top-10)+"px;'>");
+			continue;
+			}
+		//segona meitat per les fitxes dobles
+		if (cadena_fitxes_tirades_dreta[i-1]==":" && cadena_fitxes_tirades_dreta[i]==cadena_fitxes_tirades_dreta[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top:"+(coordenada_top+10)+"px;'>");
+			derrera_doble=true;
+			if(i!=11)
+			incrementador_left=incrementador_left+20;
+			continue;
+			}
+		}	
+	var incrementador_top=0;
+	for (i=12;i<(16+1);i++)//dreta del sis doble adaptacio per pujar
+		{
+		//fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_dreta[i-1]=="|" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i+2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top)+"px;'>");
+			incrementador_top=incrementador_top-20;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_dreta[i-1]==":" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			incrementador_top=incrementador_top-20;
+			derrera_doble=false;
+			continue;
+			}
+		//fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_dreta[i-1]=="|" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i+2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top-30)+"px;'>");
+			incrementador_top=incrementador_top-50;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_dreta[i-1]==":" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i-2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			incrementador_top=incrementador_top-20;
+			derrera_doble=false;
+			continue;
+			}
+		//doble
+		if (cadena_fitxes_tirades_dreta[i-1]=="|" && cadena_fitxes_tirades_dreta[i]==cadena_fitxes_tirades_dreta[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top-10)+"px;'>");
+			continue;
+			}
+		//segona meitat per les fitxes dobles
+		if (cadena_fitxes_tirades_dreta[i-1]==":" && cadena_fitxes_tirades_dreta[i]==cadena_fitxes_tirades_dreta[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top:"+(coordenada_top+10)+"px;'>");
+			derrera_doble=true;
+			incrementador_top=incrementador_top-30;
+			continue;
+			}
+		}
+////////////////
+	for (i=16;i<(cadena_fitxes_tirades_dreta.length);i++)//dreta del sis doble anar per baixant
+		{
+		//fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_dreta[i-1]=="|" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i+2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			incrementador_top=incrementador_top-20;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior normal)
+		if (cadena_fitxes_tirades_dreta[i-1]==":" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			incrementador_top=incrementador_top-20;
+			derrera_doble=false;
+			continue;
+			}
+		//fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_dreta[i-1]=="|" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i+2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			incrementador_top=incrementador_top-20;
+			continue;
+			}
+		//segona meitat per les fitxes normals (anterior doble)
+		if (cadena_fitxes_tirades_dreta[i-1]==":" && cadena_fitxes_tirades_dreta[i]!=cadena_fitxes_tirades_dreta[i-2] && derrera_doble==true) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+"v.png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left)+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			if(i==18)
+			incrementador_top=incrementador_top-50;
+			else
+			incrementador_top=incrementador_top-20;
+			derrera_doble=false;
+			continue;
+			}
+		//doble
+		if (cadena_fitxes_tirades_dreta[i-1]=="|" && cadena_fitxes_tirades_dreta[i]==cadena_fitxes_tirades_dreta[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left+(-10))+"px; top: "+(coordenada_top+incrementador_top)+"px;'>");
+			continue;
+			}
+		//segona meitat per les fitxes dobles
+		if (cadena_fitxes_tirades_dreta[i-1]==":" && cadena_fitxes_tirades_dreta[i]==cadena_fitxes_tirades_dreta[i-2] && derrera_doble==false) 
+			{
+			document.write("<img src='"+parseInt(cadena_fitxes_tirades_dreta[i])+".png' height='20' width='20' style='position: absolute; left: "+(coordenada_left+incrementador_left+(10))+"px; top:"+(coordenada_top+incrementador_top)+"px;'>");
+			derrera_doble=true;
+			incrementador_top=incrementador_top-20;
+			continue;
+			}
+		}
+	</script>
+	</div>	
+	<div>
+	<p align="center">
+	<script type="text/javascript">
+for (fitxa=0;fitxa<7;fitxa++)
+	{
+	if (cadena_0_j0[fitxa]!="" && seleccionat_j0[fitxa]=="no_seleccionada")
+		{
+		document.write("<button id='"+fitxa+"' onClick='seleccionar_desseleccionar(this.id);' style='width: 50px; height: 45px; background-color: black; position:inherit; left: "+(fitxa*30)+"px;'><img src='"+cadena_0_j0[fitxa]+"v.png' height='20' width='20' style='position: relative; left:-10;'><img src='"+cadena_1_j0[fitxa]+"v.png' height='20' width='20' style='position: relative; left: 0px; top: -3px;'></button>");
+		}
+	if (cadena_0_j0[fitxa]!="" && seleccionat_j0[fitxa]=="seleccionada")
+		{
+		document.write("<button id='"+fitxa+"' onClick='seleccionar_desseleccionar(this.id);' style='width: 50px; height: 45px;background-color: lightgrey; position:inherit; left: "+(fitxa*30)+"px;'><img src='"+cadena_0_j0[fitxa]+"v.png' height='20' width='20' style='position: relative; left -10;'><img src='"+cadena_1_j0[fitxa]+"v.png' height='20' width='20' style='position: relative; left: 0px; top: -3px;'></button>");
+		}
+	}
+	</script>
+	</p>
+	<p align="center">
+	<script type="text/javascript">
+if (torn==3)
+	{
+	preparat_per_tirar();
+	}
+if (torn==2)
+	{
+	preparat_per_tirar();
+	}
+if (torn==1)
+	{
+	preparat_per_tirar();
+	}
+if (torn==0)
+	{
+	s_ha_tirat=true;
+	document.write("<button onClick='text_resultant_esquerra();preparat_per_tirar();' style='position:inherit; left: 0px; height: 40px;'>Tirar<br>Esquerra</button>");
+	document.write("<button onClick='text_resultant_dreta();preparat_per_tirar();' style='position:inherit; left: 111px;  height: 40px;'>Tirar<br>Dreta</button>");
+	document.write("<button onClick='text_resutant_doblar_dos_dobles();preparat_per_tirar();' style='position:inherit; left: 211px; height: 40px;'>Tirar<br>2 dobles</button>");
+	document.write("<button onClick='text_resultant_passo();preparat_per_tirar();' style='position:inherit; left: 294px;  height: 40px;'>Passar<br>No pots tirar</button>");
+	}
+	</script>
+	</p>
+	</div>
+	</div>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<div style="border: 2px solid white; ">
+	<p>Ordre dels jugadors a la taula:<br><br>Jugador humà (Tu)<script type="text/javascript">contar_fitxes_jugadors();document.write(" ("+num_fitxes_j0+" fitxes)");if (torn==0){document.write("<b style='color:lightblue;'> (torn)</b>")}</script><br>Antonio (Màquina)<script type="text/javascript">document.write(" ("+num_fitxes_j1+" fitxes)");if (torn==1){document.write("<b style='color:lightblue;'> (torn)</b>")}</script><br>Ramone (Màquina)<script type="text/javascript">document.write(" ("+num_fitxes_j2+" fitxes)");if (torn==2){document.write("<b style='color:lightblue;'> (torn)</b>")}</script><br>Bonjour (Màquina)<script type="text/javascript">document.write(" ("+num_fitxes_j3+" fitxes)");if (torn==3){document.write("<b style='color:lightblue;'>  (torn)</b>")}</script>
+	</p>
+	</div>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<div style="border: 2px solid white; ">
+	<p>Missatges del joc:<br> <script type="text/javascript">document.write(missatge);</script></p>
+	</div>
+	</td>	
+	<tr>
+	<td>
+		<footer>
+		<p>
+		<hr>
+		El codi en javascript contingut en aquest document html esta publicat sota els termes la llicència GNU GPL (Podeu veure-ho en el codi font).
+		<hr>
+		<a rel="license" href="https://creativecommons.org/publicdomain/mark/1.0/">
+		<img alt="Llicencia de Creative Commons" style="border-width:0" src="creativecommons_public-domain_80x15.png">
+        </a>
+		<br>
+        Les imàtges i els texts continguts en aquesta pàgina, i visibles desde le vostre navegador, són de domini public.
+		<hr>
+        </p>	
+		</footer>
+	</td>	
+	</tr>
+	</tr>
+	</table>
+	</div>
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(function () {
+          console.log('service worker registered');
+        })
+        .catch(function () {
+          console.warn('service worker failed');
+        });
+    }
+  </script>
+	</body>
+</html>
